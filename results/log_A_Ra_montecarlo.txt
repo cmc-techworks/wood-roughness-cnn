@@ -1,0 +1,138 @@
+﻿python.exe : WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+En línea: 3 Carácter: 1
++ & $T montecarlo_incertidumbre.py --arch A --param Ra --n-replicas 20  ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (WARNING: All lo...itten to STDERR:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+I0000 00:00:1786990420.470713    6220 port.cc:153] oneDNN custom operations are on. You may see slightly different 
+numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1786990422.337202    6220 port.cc:153] oneDNN custom operations are on. You may see slightly different 
+numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if 
+CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+WARNING:tensorflow:5 out of the last 13 calls to <function 
+TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x0000027C7626D080> triggered 
+tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating 
+@tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of 
+tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True 
+option that can avoid unnecessary retracing. For (3), please refer to 
+https://www.tensorflow.org/guide/function#controlling_retracing and 
+https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+WARNING:tensorflow:5 out of the last 13 calls to <function 
+TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x0000027C9A54B4C0> triggered 
+tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating 
+@tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of 
+tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True 
+option that can avoid unnecessary retracing. For (3), please refer to 
+https://www.tensorflow.org/guide/function#controlling_retracing and 
+https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+==========================================================================
+              arquitectura: A
+                 parametro: Ra
+                n_replicas: 20
+          nivel_remuestreo: jerarquico
+                    epochs: 40
+                      seed: 10
+    muestras_entrenamiento: 1030
+             muestras_test: 190
+                   comando: montecarlo_incertidumbre.py --arch A --param Ra --n-replicas 20 --nivel jerarquico --seed 10
+                tensorflow: 2.21.0
+                     keras: 3.14.1
+                    python: 3.11.15
+       justificacion_nivel: la identidad de la probeta explica el 94% de la brecha CV-test y la SD entre probetas es 5.6x la SD entre modelos, de modo que un remuestreo que ignore el agrupamiento subestima la banda
+==========================================================================
+
+============================================================
+Replica 1/20 | 1029 filas | 3 probetas distintas: [np.int64(6), np.int64(8), np.int64(10)]
+  entrenada en 3.7 min | prediccion media sobre test 4.175
+
+============================================================
+Replica 2/20 | 992 filas | 5 probetas distintas: [np.int64(5), np.int64(6), np.int64(7), np.int64(8), np.int64(10)]
+  entrenada en 3.6 min | prediccion media sobre test 4.330
+
+============================================================
+Replica 3/20 | 1072 filas | 5 probetas distintas: [np.int64(6), np.int64(7), np.int64(8), np.int64(9), np.int64(10)]
+  entrenada en 2.9 min | prediccion media sobre test 4.214
+
+============================================================
+Replica 4/20 | 937 filas | 4 probetas distintas: [np.int64(5), np.int64(6), np.int64(7), np.int64(9)]
+  entrenada en 2.5 min | prediccion media sobre test 3.861
+
+============================================================
+Replica 5/20 | 1022 filas | 4 probetas distintas: [np.int64(6), np.int64(7), np.int64(8), np.int64(9)]
+  entrenada en 3.8 min | prediccion media sobre test 4.026
+
+============================================================
+Replica 6/20 | 1009 filas | 3 probetas distintas: [np.int64(6), np.int64(7), np.int64(9)]
+  entrenada en 3.8 min | prediccion media sobre test 3.959
+
+============================================================
+Replica 7/20 | 901 filas | 3 probetas distintas: [np.int64(5), np.int64(6), np.int64(8)]
+  entrenada en 3.3 min | prediccion media sobre test 3.929
+
+============================================================
+Replica 8/20 | 1038 filas | 4 probetas distintas: [np.int64(5), np.int64(6), np.int64(8), np.int64(10)]
+  entrenada en 3.7 min | prediccion media sobre test 4.355
+
+============================================================
+Replica 9/20 | 987 filas | 4 probetas distintas: [np.int64(5), np.int64(6), np.int64(8), np.int64(10)]
+  entrenada en 3.6 min | prediccion media sobre test 4.085
+
+============================================================
+Replica 10/20 | 1031 filas | 4 probetas distintas: [np.int64(5), np.int64(6), np.int64(8), np.int64(10)]
+  entrenada en 3.4 min | prediccion media sobre test 4.231
+
+============================================================
+Replica 11/20 | 1076 filas | 4 probetas distintas: [np.int64(5), np.int64(8), np.int64(9), np.int64(10)]
+  entrenada en 3.9 min | prediccion media sobre test 4.310
+
+============================================================
+Replica 12/20 | 1030 filas | 6 probetas distintas: [np.int64(5), np.int64(6), np.int64(7), np.int64(8), np.int64(9), np.int64(10)]
+  entrenada en 3.4 min | prediccion media sobre test 4.246
+
+============================================================
+Replica 13/20 | 1104 filas | 4 probetas distintas: [np.int64(7), np.int64(8), np.int64(9), np.int64(10)]
+  entrenada en 3.3 min | prediccion media sobre test 4.249
+
+============================================================
+Replica 14/20 | 1022 filas | 2 probetas distintas: [np.int64(6), np.int64(10)]
+  entrenada en 3.7 min | prediccion media sobre test 4.361
+
+============================================================
+Replica 15/20 | 1030 filas | 6 probetas distintas: [np.int64(5), np.int64(6), np.int64(7), np.int64(8), np.int64(9), np.int64(10)]
+  entrenada en 2.6 min | prediccion media sobre test 4.097
+
+============================================================
+Replica 16/20 | 1058 filas | 3 probetas distintas: [np.int64(6), np.int64(7), np.int64(9)]
+  entrenada en 2.8 min | prediccion media sobre test 4.247
+
+============================================================
+Replica 17/20 | 1032 filas | 5 probetas distintas: [np.int64(5), np.int64(6), np.int64(8), np.int64(9), np.int64(10)]
+  entrenada en 3.7 min | prediccion media sobre test 4.399
+
+============================================================
+Replica 18/20 | 1119 filas | 3 probetas distintas: [np.int64(7), np.int64(9), np.int64(10)]
+  entrenada en 3.2 min | prediccion media sobre test 4.331
+
+============================================================
+Replica 19/20 | 937 filas | 4 probetas distintas: [np.int64(5), np.int64(6), np.int64(7), np.int64(9)]
+  entrenada en 2.5 min | prediccion media sobre test 3.973
+
+============================================================
+Replica 20/20 | 974 filas | 4 probetas distintas: [np.int64(5), np.int64(6), np.int64(9), np.int64(10)]
+  entrenada en 3.5 min | prediccion media sobre test 4.003
+
+==========================================================================
+  MONTE CARLO (20 replicas, nivel jerarquico)
+==========================================================================
+  R2 de la media          : 0.8813
+  MAE de la media         : 0.4131
+  Cobertura del 90% (p05-p95)   : 46.3%   ancho medio 0.545
+  Cobertura del 95% (p2.5-p97.5): 52.1%
+  Tiempo total: 66.9 min
+
+  Resultados en: <PROJECT_ROOT>/src/resultados\A_oficial\Ra\montecarlo

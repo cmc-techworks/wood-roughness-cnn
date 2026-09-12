@@ -1,0 +1,89 @@
+Corridas completas cargadas: 8 de 8
+  A/s10, A/s20, B/s10, B/s20, C/s10, C/s20, D/s10, D/s20
+
+==============================================================================
+1. R2 MEDIO POR ARQUITECTURA Y SEMILLA (6 pliegues cada celda)
+==============================================================================
+
+arq     parametros       seed 10       seed 20  |Δ semilla|    media
+A           25,681        0.7608        0.7782       0.0174   0.7695
+B          709,713        0.7875        0.8067       0.0192   0.7971
+C        2,970,705        0.7707        0.7437       0.0270   0.7572
+D       12,211,281        0.7406        0.7039       0.0366   0.7222
+
+(entre parentesis, la DE entre los 6 pliegues de cada celda)
+  A: seed 10 DE 0.0711  seed 20 DE 0.0438
+  B: seed 10 DE 0.0562  seed 20 DE 0.0379
+  C: seed 10 DE 0.0857  seed 20 DE 0.0911
+  D: seed 10 DE 0.0886  seed 20 DE 0.1077
+
+==============================================================================
+2. ¿QUE MUEVE MAS EL R2: LA ARQUITECTURA O LA SEMILLA?
+==============================================================================
+
+Semilla 10: mejor B = 0.7875, peor D = 0.7406  ->  rango 0.0470
+  ranking: B > C > A > D
+
+Semilla 20: mejor B = 0.8067, peor D = 0.7039  ->  rango 0.1028
+  ranking: B > A > C > D
+
+Cambiar solo la semilla, arquitectura fija:
+  |Δ| medio = 0.0251   maximo = 0.0366
+
+Cambiar la arquitectura (475x mas parametros), semilla fija:
+  rango medio entre las 4 = 0.0749
+
+  razon arquitectura / semilla = 2.99
+
+¿Se mantiene el ranking al cambiar la semilla?  NO
+  seed 10: B > C > A > D
+  seed 20: B > A > C > D
+  correlacion de rangos entre semillas: Spearman +0.20 (p = 0.800)
+
+==============================================================================
+3. ANOVA DE DOS VIAS **CON REPLICACION** -- ahora se separa el ruido puro
+==============================================================================
+48 corridas = 4 arquitecturas x 6 probetas x 2 semillas.
+La semilla actua como replica: por primera vez el ruido de entrenamiento
+queda separado de la interaccion arquitectura x probeta.
+
+fuente                          SS   gl         MS       F        p  denominador
+arquitectura                0.0347    3    0.01157    1.60   0.2302  interaccion
+probeta                     0.0927    5    0.01855    2.57   0.0715  interaccion
+arquitectura x probeta      0.1082   15    0.00721    4.27   0.0008  ruido
+ruido (semilla)             0.0406   24    0.00169
+
+OJO -- si la arquitectura se contrastara contra el ruido puro (probeta como
+factor FIJO) daria F = 6.85, p = 0.0017, o sea 'significativa'. Es el
+denominador equivocado para este diseno: solo permitiria concluir sobre estas 6
+probetas, no sobre madera nueva. Vale la pena preguntarselo a Gomez.
+
+Componentes de varianza:
+  arquitectura        0.000363  (  5.8 %)
+  probeta             0.001417  ( 22.7 %)
+  interaccion         0.002761  ( 44.3 %)
+  ruido de semilla    0.001690  ( 27.1 %)
+
+LECTURA: el ruido puro de entrenamiento (cambiar la semilla) explica
+27.1 % de la varianza del R2; la arquitectura, 5.8 %.
+
+==============================================================================
+4. COMPARACIONES CONTRA LA PUBLICADA (D), PAREADAS POR PROBETA Y SEMILLA
+==============================================================================
+
+par          n   dif. media       DE    p (t)  p (Wilc.)                 IC 95 %
+A vs D      12      +0.0473   0.0944   0.1108     0.1294   [-0.0127, +0.1073]
+B vs D      12      +0.0749   0.1283   0.0681     0.1099   [-0.0066, +0.1564]
+C vs D      12      +0.0349   0.0885   0.1989     0.3013   [-0.0213, +0.0912]
+
+Con 12 pares en vez de 6, ninguna diferencia contra la publicada alcanza
+significancia al 5 %. Los IC siguen conteniendo el 0 y siguen siendo anchos:
+duplicar los datos no convirtio el empate en una diferencia.
+
+¿En cuantas de las 12 celdas gana cada arquitectura?
+  A:  0 de 12
+  B:  9 de 12
+  C:  0 de 12
+  D:  3 de 12
+Ninguna gana en todas -> no hay una arquitectura mejor en todas las probetas,
+que es justamente lo que dice la interaccion significativa del punto 3.

@@ -1,0 +1,12 @@
+# Normalise line endings so the repository is identical on every platform.
+* text=auto eol=lf
+
+# Binary assets: never touch these.
+*.tiff  binary
+*.tif   binary
+*.png   binary
+*.jpg   binary
+*.pdf   binary
+*.xlsx  binary
+*.xls   binary
+*.keras binary

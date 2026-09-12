@@ -1,0 +1,24 @@
+=== INICIO Grad-CAM C-Rz seed13 Thu Sep 10 12:53:10 HSP 2026 ===
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789055592.590839   24804 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789055604.458136   24804 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+  modelo: modelo_C_Rz_final_seed13.keras
+  capa convolucional analizada: conv2d_1
+
+==========================================================================
+  DONDE MIRA LA RED  (Grad-CAM sobre el conjunto de prueba)
+==========================================================================
+   grano   n   r con alta frec.   r con baja frec.  borde/centro
+  P40     10             -0.195              0.066         0.994
+  P80     10             -0.157              0.150         0.995
+  P120    10             -0.081              0.074         1.000
+  P180    10              0.037              0.217         0.999
+   TODOS  40             -0.099              0.127         0.997
+
+  alta frecuencia vs baja frecuencia: Wilcoxon p = 1.82e-12
+  activacion en el borde vs el centro: razon media 0.997 (sin sesgo al borde)
+
+  Resultados en: <PROJECT_ROOT>/src/resultados\C_oficial\Rz\interpretabilidad
+=== FIN exit=0 Thu Sep 10 12:54:10 HSP 2026 ===

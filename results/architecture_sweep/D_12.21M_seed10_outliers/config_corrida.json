@@ -1,0 +1,17 @@
+{
+  "arquitectura": "D",
+  "parametros": 12211281,
+  "seed": 10,
+  "dataset": "outliers",
+  "muestras": 1056,
+  "epochs": 40,
+  "batch_size": 32,
+  "folds_totales": 6,
+  "folds_corridos": "todas",
+  "tensorflow": "2.21.0",
+  "keras": "3.14.1",
+  "python": "3.11.15",
+  "plataforma": "Windows-10-10.0.26200-SP0",
+  "gpus": [],
+  "data_dir": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\ARTICULO\\fotos_recortes"
+}

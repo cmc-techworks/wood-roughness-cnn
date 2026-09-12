@@ -1,0 +1,367 @@
+﻿python.exe : WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+En línea: 2 Carácter: 1
++ & <HOME>/miniconda3/envs/tesis/python.exe "$root\CODE\6_figu ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (WARNING: All lo...itten to STDERR:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+I0000 00:00:1787842812.781582   32820 port.cc:153] oneDNN custom operations are on. You may see slightly different 
+numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1787842817.374212   32820 port.cc:153] oneDNN custom operations are on. You may see slightly different 
+numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1787842818.244396   32820 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available 
+CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX_VNNI FMA, in other operations, rebuild 
+TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if 
+CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+Cargando modelo: <PROJECT_ROOT>/src/resultados\A_oficial\Ra\modelos\modelo_A_Ra_final_seed10.keras
+Modelo cargado.
+Ground truth cargado: 190 filas
+Imágenes encontradas: 192
+Sin coincidencia: P11_C2_G80_Recorte_Recorte_C_3.5.tiff
+Sin coincidencia: P11_C2_G80_Recorte_Recorte_C_3.6.tiff
+
+Imágenes procesadas: 190
+
+=== MÉTRICAS FINALES (Ra) ===
+R²   : 0.8729
+MAE  : 0.4231 µm
+RMSE : 0.6235 µm
+MSE  : 0.3887 µm²
+MAPE : 9.48%
+
+Métricas por grano:
+  P40: MAE=0.7442 µm  (n=48)
+  P80: MAE=0.4093 µm  (n=46)
+  P120: MAE=0.2131 µm  (n=48)
+  P180: MAE=0.3251 µm  (n=48)
+
+Resultados guardados en: <PROJECT_ROOT>/src/resultados\A_oficial\Ra\test\seed10\resultados_validacion_Ra.xlsx
+Listo.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1787842839.049436   13016 port.cc:153] oneDNN custom operations are on. You may see slightly different 
+numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1787842841.057129   13016 port.cc:153] oneDNN custom operations are on. You may see slightly different 
+numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1787842841.502940   13016 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available 
+CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX_VNNI FMA, in other operations, rebuild 
+TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if 
+CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+Cargando modelo: <PROJECT_ROOT>/src/resultados\A_oficial\Ra\modelos\modelo_A_Ra_final_seed11.keras
+Modelo cargado.
+Ground truth cargado: 190 filas
+Imágenes encontradas: 192
+Sin coincidencia: P11_C2_G80_Recorte_Recorte_C_3.5.tiff
+Sin coincidencia: P11_C2_G80_Recorte_Recorte_C_3.6.tiff
+
+Imágenes procesadas: 190
+
+=== MÉTRICAS FINALES (Ra) ===
+R²   : 0.8796
+MAE  : 0.4115 µm
+RMSE : 0.6069 µm
+MSE  : 0.3683 µm²
+MAPE : 9.39%
+
+Métricas por grano:
+  P40: MAE=0.7159 µm  (n=48)
+  P80: MAE=0.4043 µm  (n=46)
+  P120: MAE=0.1882 µm  (n=48)
+  P180: MAE=0.3373 µm  (n=48)
+
+Resultados guardados en: <PROJECT_ROOT>/src/resultados\A_oficial\Ra\test\seed11\resultados_validacion_Ra.xlsx
+Listo.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1787842857.687970   25808 port.cc:153] oneDNN custom operations are on. You may see slightly different 
+numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1787842859.609764   25808 port.cc:153] oneDNN custom operations are on. You may see slightly different 
+numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1787842859.991836   25808 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available 
+CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX_VNNI FMA, in other operations, rebuild 
+TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if 
+CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+Cargando modelo: <PROJECT_ROOT>/src/resultados\A_oficial\Ra\modelos\modelo_A_Ra_final_seed12.keras
+Modelo cargado.
+Ground truth cargado: 190 filas
+Imágenes encontradas: 192
+Sin coincidencia: P11_C2_G80_Recorte_Recorte_C_3.5.tiff
+Sin coincidencia: P11_C2_G80_Recorte_Recorte_C_3.6.tiff
+
+Imágenes procesadas: 190
+
+=== MÉTRICAS FINALES (Ra) ===
+R²   : 0.8804
+MAE  : 0.4131 µm
+RMSE : 0.6049 µm
+MSE  : 0.3659 µm²
+MAPE : 9.53%
+
+Métricas por grano:
+  P40: MAE=0.7147 µm  (n=48)
+  P80: MAE=0.4047 µm  (n=46)
+  P120: MAE=0.1821 µm  (n=48)
+  P180: MAE=0.3507 µm  (n=48)
+
+Resultados guardados en: <PROJECT_ROOT>/src/resultados\A_oficial\Ra\test\seed12\resultados_validacion_Ra.xlsx
+Listo.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1787842875.550555   25128 port.cc:153] oneDNN custom operations are on. You may see slightly different 
+numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1787842877.469806   25128 port.cc:153] oneDNN custom operations are on. You may see slightly different 
+numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1787842878.676689   25128 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available 
+CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX_VNNI FMA, in other operations, rebuild 
+TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if 
+CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+Cargando modelo: <PROJECT_ROOT>/src/resultados\A_oficial\Ra\modelos\modelo_A_Ra_final_seed13.keras
+Modelo cargado.
+Ground truth cargado: 190 filas
+Imágenes encontradas: 192
+Sin coincidencia: P11_C2_G80_Recorte_Recorte_C_3.5.tiff
+Sin coincidencia: P11_C2_G80_Recorte_Recorte_C_3.6.tiff
+
+Imágenes procesadas: 190
+
+=== MÉTRICAS FINALES (Ra) ===
+R²   : 0.8727
+MAE  : 0.4260 µm
+RMSE : 0.6240 µm
+MSE  : 0.3893 µm²
+MAPE : 9.64%
+
+Métricas por grano:
+  P40: MAE=0.7371 µm  (n=48)
+  P80: MAE=0.4181 µm  (n=46)
+  P120: MAE=0.2110 µm  (n=48)
+  P180: MAE=0.3374 µm  (n=48)
+
+Resultados guardados en: <PROJECT_ROOT>/src/resultados\A_oficial\Ra\test\seed13\resultados_validacion_Ra.xlsx
+Listo.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1787842895.684128   18304 port.cc:153] oneDNN custom operations are on. You may see slightly different 
+numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1787842897.687315   18304 port.cc:153] oneDNN custom operations are on. You may see slightly different 
+numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1787842898.172070   18304 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available 
+CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX_VNNI FMA, in other operations, rebuild 
+TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if 
+CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+Cargando modelo: <PROJECT_ROOT>/src/resultados\A_oficial\Rz\modelos\modelo_A_Rz_final_seed10.keras
+Modelo cargado.
+Ground truth cargado: 190 filas
+Imágenes encontradas: 192
+Sin coincidencia: P11_C2_G80_Recorte_Recorte_C_3.5.tiff
+Sin coincidencia: P11_C2_G80_Recorte_Recorte_C_3.6.tiff
+
+Imágenes procesadas: 190
+
+=== MÉTRICAS FINALES (Rz) ===
+R²   : 0.7452
+MAE  : 3.5487 µm
+RMSE : 5.3368 µm
+MSE  : 28.4810 µm²
+MAPE : 10.75%
+
+Métricas por grano:
+  P40: MAE=5.9945 µm  (n=48)
+  P80: MAE=3.5961 µm  (n=46)
+  P120: MAE=1.4935 µm  (n=48)
+  P180: MAE=3.1125 µm  (n=48)
+
+Resultados guardados en: <PROJECT_ROOT>/src/resultados\A_oficial\Rz\test\seed10\resultados_validacion_Rz.xlsx
+Listo.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1787842914.162818   15280 port.cc:153] oneDNN custom operations are on. You may see slightly different 
+numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1787842916.101386   15280 port.cc:153] oneDNN custom operations are on. You may see slightly different 
+numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1787842916.486962   15280 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available 
+CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX_VNNI FMA, in other operations, rebuild 
+TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if 
+CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+Cargando modelo: <PROJECT_ROOT>/src/resultados\A_oficial\Rz\modelos\modelo_A_Rz_final_seed11.keras
+Modelo cargado.
+Ground truth cargado: 190 filas
+Imágenes encontradas: 192
+Sin coincidencia: P11_C2_G80_Recorte_Recorte_C_3.5.tiff
+Sin coincidencia: P11_C2_G80_Recorte_Recorte_C_3.6.tiff
+
+Imágenes procesadas: 190
+
+=== MÉTRICAS FINALES (Rz) ===
+R²   : 0.7805
+MAE  : 3.6080 µm
+RMSE : 4.9538 µm
+MSE  : 24.5400 µm²
+MAPE : 12.16%
+
+Métricas por grano:
+  P40: MAE=5.3932 µm  (n=48)
+  P80: MAE=3.3478 µm  (n=46)
+  P120: MAE=2.0312 µm  (n=48)
+  P180: MAE=3.6490 µm  (n=48)
+
+Resultados guardados en: <PROJECT_ROOT>/src/resultados\A_oficial\Rz\test\seed11\resultados_validacion_Rz.xlsx
+Listo.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1787842932.302817     468 port.cc:153] oneDNN custom operations are on. You may see slightly different 
+numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1787842934.711786     468 port.cc:153] oneDNN custom operations are on. You may see slightly different 
+numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1787842935.287215     468 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available 
+CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX_VNNI FMA, in other operations, rebuild 
+TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if 
+CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+Cargando modelo: <PROJECT_ROOT>/src/resultados\A_oficial\Rz\modelos\modelo_A_Rz_final_seed12.keras
+Modelo cargado.
+Ground truth cargado: 190 filas
+Imágenes encontradas: 192
+Sin coincidencia: P11_C2_G80_Recorte_Recorte_C_3.5.tiff
+Sin coincidencia: P11_C2_G80_Recorte_Recorte_C_3.6.tiff
+
+Imágenes procesadas: 190
+
+=== MÉTRICAS FINALES (Rz) ===
+R²   : 0.7677
+MAE  : 3.4871 µm
+RMSE : 5.0956 µm
+MSE  : 25.9655 µm²
+MAPE : 11.03%
+
+Métricas por grano:
+  P40: MAE=5.6357 µm  (n=48)
+  P80: MAE=3.4224 µm  (n=46)
+  P120: MAE=1.6609 µm  (n=48)
+  P180: MAE=3.2268 µm  (n=48)
+
+Resultados guardados en: <PROJECT_ROOT>/src/resultados\A_oficial\Rz\test\seed12\resultados_validacion_Rz.xlsx
+Listo.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1787842951.873439   15996 port.cc:153] oneDNN custom operations are on. You may see slightly different 
+numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1787842954.097445   15996 port.cc:153] oneDNN custom operations are on. You may see slightly different 
+numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1787842954.534899   15996 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available 
+CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX_VNNI FMA, in other operations, rebuild 
+TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if 
+CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+Cargando modelo: <PROJECT_ROOT>/src/resultados\A_oficial\Rz\modelos\modelo_A_Rz_final_seed13.keras
+Modelo cargado.
+Ground truth cargado: 190 filas
+Imágenes encontradas: 192
+Sin coincidencia: P11_C2_G80_Recorte_Recorte_C_3.5.tiff
+Sin coincidencia: P11_C2_G80_Recorte_Recorte_C_3.6.tiff
+
+Imágenes procesadas: 190
+
+=== MÉTRICAS FINALES (Rz) ===
+R²   : 0.7812
+MAE  : 3.5545 µm
+RMSE : 4.9457 µm
+MSE  : 24.4601 µm²
+MAPE : 11.84%
+
+Métricas por grano:
+  P40: MAE=5.4175 µm  (n=48)
+  P80: MAE=3.3233 µm  (n=46)
+  P120: MAE=1.9119 µm  (n=48)
+  P180: MAE=3.5556 µm  (n=48)
+
+Resultados guardados en: <PROJECT_ROOT>/src/resultados\A_oficial\Rz\test\seed13\resultados_validacion_Rz.xlsx
+Listo.
+
+======================================================================
+Ra · seed 10
+======================================================================
+
+======================================================================
+Ra · seed 11
+======================================================================
+
+======================================================================
+Ra · seed 12
+======================================================================
+
+======================================================================
+Ra · seed 13
+======================================================================
+
+======================================================================
+Rz · seed 10
+======================================================================
+
+======================================================================
+Rz · seed 11
+======================================================================
+
+======================================================================
+Rz · seed 12
+======================================================================
+
+======================================================================
+Rz · seed 13
+======================================================================
+
+
+======================================================================
+CONSOLIDADO
+======================================================================
+
+Ra
+ seed   n     R2    MAE   RMSE    MSE
+   10 190 0.8729 0.4231 0.6235 0.3887
+   11 190 0.8796 0.4115 0.6069 0.3683
+   12 190 0.8804 0.4131 0.6049 0.3659
+   13 190 0.8727 0.4260 0.6240 0.3893
+  media  R2 = 0.8764 ± 0.0042   MAE = 0.4184 ± 0.0072   RMSE = 0.6148 ± 0.0103
+  [OK] contra metricas_test_por_repeticion.xlsx: dR2 = 0.00001, dMAE = 0.00000
+
+Rz
+ seed   n     R2    MAE   RMSE     MSE
+   10 190 0.7452 3.5487 5.3368 28.4810
+   11 190 0.7805 3.6080 4.9538 24.5400
+   12 190 0.7677 3.4871 5.0956 25.9655
+   13 190 0.7812 3.5545 4.9457 24.4601
+  media  R2 = 0.7686 ± 0.0168   MAE = 3.5496 ± 0.0495   RMSE = 5.0830 ± 0.1827
+  [OK] contra metricas_test_por_repeticion.xlsx: dR2 = 0.00000, dMAE = 0.00002
+
+Listo.

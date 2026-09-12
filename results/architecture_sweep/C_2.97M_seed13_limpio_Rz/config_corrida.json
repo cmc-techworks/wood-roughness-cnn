@@ -1,0 +1,19 @@
+{
+  "arquitectura": "C",
+  "parametros": 2970705,
+  "parametro_objetivo": "Rz",
+  "seed": 13,
+  "dataset": "limpio",
+  "comando": "barrido_arquitecturas.py --arch C --seed 13 --folds todas --param Rz --dataset limpio --guardar-modelos",
+  "muestras": 1030,
+  "epochs": 40,
+  "batch_size": 32,
+  "folds_totales": 6,
+  "folds_corridos": "todas",
+  "tensorflow": "2.21.0",
+  "keras": "3.14.1",
+  "python": "3.11.15",
+  "plataforma": "Windows-10-10.0.26200-SP0",
+  "gpus": [],
+  "data_dir": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\ARTICULO\\fotos_recortes"
+}

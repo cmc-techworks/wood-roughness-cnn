@@ -1,0 +1,31 @@
+# Reference environment for reproducing the results of the paper.
+#   conda env create -f environment.yml
+#   conda activate roughness-vision
+#
+# Versions are pinned to those used for every number reported in the paper.
+# CPU-only: TensorFlow >= 2.11 has no native GPU support on Windows, so the reference
+# runs were executed on CPU. The code runs unchanged on a GPU build under Linux/WSL2,
+# but floating-point ordering differs and results may shift in the last digits.
+name: roughness-vision
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11.15
+  - pip
+  - pip:
+      - tensorflow==2.21.0
+      - keras==3.14.1
+      - numpy==2.4.6
+      - pandas==3.0.3
+      - scikit-learn==1.9.0
+      - scipy==1.17.1
+      - matplotlib==3.11.0
+      - seaborn==0.13.2
+      - opencv-python==4.13.0
+      - pillow==12.2.0
+      - h5py==3.14.0
+      - openpyxl==3.1.5
+# Not installable from PyPI, and needed only by src/0_adquisicion/Server_Vision_V2.py:
+#   PySpin — the Python binding of the Teledyne FLIR Spinnaker SDK, which must be
+#   installed separately together with the camera drivers. It is required to operate
+#   the physical camera, never to reproduce any result in this repository.

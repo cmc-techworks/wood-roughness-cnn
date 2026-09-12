@@ -1,0 +1,19 @@
+{
+  "arquitectura": "B",
+  "parametros": 709713,
+  "parametro_objetivo": "Ra",
+  "seed": 11,
+  "dataset": "limpio",
+  "comando": "c:/Users/Lenovo/OneDrive/Desktop/ARTICULO/CODE/3_entrenamiento/barrido_arquitecturas.py --arch B --param Ra --seed 11 --folds todas",
+  "muestras": 1030,
+  "epochs": 40,
+  "batch_size": 32,
+  "folds_totales": 6,
+  "folds_corridos": "todas",
+  "tensorflow": "2.21.0",
+  "keras": "3.14.1",
+  "python": "3.11.15",
+  "plataforma": "Windows-10-10.0.26200-SP0",
+  "gpus": [],
+  "data_dir": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\ARTICULO\\fotos_recortes"
+}

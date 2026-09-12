@@ -1,0 +1,27 @@
+{
+  "arquitectura": "A",
+  "parametro": "Rz",
+  "seed": 10,
+  "epochs": 40,
+  "batch_size": 32,
+  "muestras": 1030,
+  "probetas": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "etapas": 1,
+  "hoja": "sin_outliers",
+  "comando": "entrenar_final_limpio.py --arch A --param Rz --seed 10",
+  "nota": "correccion de Red_multimodal_VC.py secciones 8-9: una sola etapa de entrenamiento, sin recompilar el mismo objeto",
+  "tensorflow": "2.21.0",
+  "keras": "3.14.1",
+  "python": "3.11.15",
+  "plataforma": "Windows-10-10.0.26200-SP0",
+  "gpus": [],
+  "data_dir": "<PROJECT_ROOT>/data/fotos_recortes",
+  "parametros": 25681
+}

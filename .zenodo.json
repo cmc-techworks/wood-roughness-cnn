@@ -1,0 +1,26 @@
+{
+  "title": "Robotic vision-based inspection for surface roughness estimation in wood — code, dataset and trained models",
+  "description": "<p>Code, image dataset, reference profilometry measurements and trained model weights supporting a multimodal convolutional neural network that estimates the surface roughness parameters Ra and Rz from grazing-light images of robotically sanded Chilean oak (<i>Nothofagus obliqua</i>), acquired in a dual-robot sanding and inspection cell.</p><p>Includes 1248 image patches from 7 specimens, each paired with a contact-profilometry measurement of the same area, the leave-one-specimen-out cross-validation splits, the training and evaluation code, the published model weights, and the scripts that regenerate every figure and table of the paper.</p>",
+  "upload_type": "software",
+  "license": "MIT",
+  "access_right": "open",
+  "language": "eng",
+  "creators": [
+    {"name": "Mora-Concha, Cristóbal", "affiliation": "Universidad de La Frontera, Temuco, Chile"},
+    {"name": "Iglesias, Fabián", "affiliation": "Universidad de La Frontera, Temuco, Chile"},
+    {"name": "Padilla, Arturo", "affiliation": "Universidad de La Frontera, Temuco, Chile"},
+    {"name": "Gómez, Walter", "affiliation": "Universidad de La Frontera, Temuco, Chile"},
+    {"name": "Diez, Eduardo", "affiliation": "Universidad de La Frontera, Temuco, Chile"}
+  ],
+  "keywords": [
+    "surface roughness",
+    "machine vision",
+    "convolutional neural network",
+    "robotic sanding",
+    "wood manufacturing",
+    "Nothofagus obliqua",
+    "quality inspection",
+    "profilometry"
+  ],
+  "notes": "Funded by ANID Chile, FONDEF IT21i0069, and project DIE21-0010 of Universidad de La Frontera. The source code is released under the MIT License; the dataset, figures and model weights are released under CC BY 4.0 (see LICENSE-DATA in the repository)."
+}

@@ -1,0 +1,21 @@
+{
+  "experimento": "ablacion_sin_grano",
+  "arquitectura_base": "A (GlobalAveragePooling2D), sin rama de grano ni concatenacion",
+  "parametros": 25089,
+  "parametro_objetivo": "Ra",
+  "seed": 10,
+  "dataset": "limpio",
+  "comando": "ablacion_sin_grano.py --seed 10 --folds todas",
+  "muestras": 1030,
+  "epochs": 40,
+  "batch_size": 32,
+  "folds_totales": 6,
+  "folds_corridos": "todas",
+  "motivo": "correo de Diez, 2026-08-29: revisar Fig. 17 y si la arquitectura A explica el R2 con la imagen o con la entrada de grano",
+  "tensorflow": "2.21.0",
+  "keras": "3.14.1",
+  "python": "3.11.15",
+  "plataforma": "Windows-10-10.0.26200-SP0",
+  "gpus": [],
+  "data_dir": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\ARTICULO\\fotos_recortes"
+}

@@ -1,0 +1,575 @@
+﻿python.exe : WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+En línea: 3 Carácter: 1
++ & $T barrido_arquitecturas.py --arch A --param Rz --seed 10 --folds t ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (WARNING: All lo...itten to STDERR:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+I0000 00:00:1786988928.477853   32936 port.cc:153] oneDNN custom operations are on. You may see slightly different 
+numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1786988930.361439   32936 port.cc:153] oneDNN custom operations are on. You may see slightly different 
+numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if 
+CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+==============================================================================
+      arquitectura: A
+        parametros: 25681
+  parametro_objetivo: Rz
+              seed: 10
+           dataset: limpio
+           comando: barrido_arquitecturas.py --arch A --param Rz --seed 10 --folds todas --dataset limpio --guardar-modelos
+          muestras: 1030
+            epochs: 40
+        batch_size: 32
+     folds_totales: 6
+    folds_corridos: todas
+        tensorflow: 2.21.0
+             keras: 3.14.1
+            python: 3.11.15
+        plataforma: Windows-10-10.0.26200-SP0
+              gpus: []
+          data_dir: <PROJECT_ROOT>/data/fotos_recortes
+==============================================================================
+
+============================================================
+Fold 1/6  | entrena 838 | valida 192 (probeta 8)
+Epoch 1/40
+27/27 - 5s - 201ms/step - loss: 923.1671 - mae: 29.0198 - val_loss: 888.4639 - val_mae: 27.7787
+Epoch 2/40
+27/27 - 4s - 157ms/step - loss: 350.6888 - mae: 15.6360 - val_loss: 127.9272 - val_mae: 9.7032
+Epoch 3/40
+27/27 - 4s - 158ms/step - loss: 81.2009 - mae: 7.0573 - val_loss: 111.2273 - val_mae: 7.5921
+Epoch 4/40
+27/27 - 4s - 156ms/step - loss: 72.8507 - mae: 6.6416 - val_loss: 111.9266 - val_mae: 7.5411
+Epoch 5/40
+27/27 - 4s - 163ms/step - loss: 72.1562 - mae: 6.6139 - val_loss: 107.1068 - val_mae: 7.6034
+Epoch 6/40
+27/27 - 5s - 183ms/step - loss: 70.0577 - mae: 6.4786 - val_loss: 104.5748 - val_mae: 7.6515
+Epoch 7/40
+27/27 - 4s - 162ms/step - loss: 68.3868 - mae: 6.3866 - val_loss: 104.3662 - val_mae: 7.5282
+Epoch 8/40
+27/27 - 4s - 165ms/step - loss: 67.6336 - mae: 6.3622 - val_loss: 102.5082 - val_mae: 7.4756
+Epoch 9/40
+27/27 - 4s - 167ms/step - loss: 65.3206 - mae: 6.1883 - val_loss: 103.2350 - val_mae: 7.2916
+Epoch 10/40
+27/27 - 5s - 170ms/step - loss: 63.3382 - mae: 6.1495 - val_loss: 97.7644 - val_mae: 7.2894
+Epoch 11/40
+27/27 - 5s - 181ms/step - loss: 60.4471 - mae: 5.9760 - val_loss: 96.0429 - val_mae: 7.0850
+Epoch 12/40
+27/27 - 5s - 185ms/step - loss: 57.9666 - mae: 5.8311 - val_loss: 95.0253 - val_mae: 6.8534
+Epoch 13/40
+27/27 - 5s - 190ms/step - loss: 55.0504 - mae: 5.6580 - val_loss: 83.6948 - val_mae: 7.1206
+Epoch 14/40
+27/27 - 5s - 191ms/step - loss: 52.4042 - mae: 5.5430 - val_loss: 82.7432 - val_mae: 6.4086
+Epoch 15/40
+27/27 - 5s - 196ms/step - loss: 47.0002 - mae: 5.1596 - val_loss: 85.5656 - val_mae: 6.2034
+Epoch 16/40
+27/27 - 5s - 179ms/step - loss: 44.7437 - mae: 4.8723 - val_loss: 65.6582 - val_mae: 5.9868
+Epoch 17/40
+27/27 - 5s - 184ms/step - loss: 40.4779 - mae: 4.7582 - val_loss: 73.2764 - val_mae: 5.6826
+Epoch 18/40
+27/27 - 5s - 186ms/step - loss: 35.6809 - mae: 4.3577 - val_loss: 58.1959 - val_mae: 5.1261
+Epoch 19/40
+27/27 - 5s - 181ms/step - loss: 32.4613 - mae: 4.1306 - val_loss: 50.3889 - val_mae: 4.7678
+Epoch 20/40
+27/27 - 5s - 186ms/step - loss: 30.2009 - mae: 4.0272 - val_loss: 46.8612 - val_mae: 4.5368
+Epoch 21/40
+27/27 - 5s - 190ms/step - loss: 28.0555 - mae: 3.8637 - val_loss: 42.7993 - val_mae: 4.3144
+Epoch 22/40
+27/27 - 5s - 182ms/step - loss: 27.6832 - mae: 3.8501 - val_loss: 36.7190 - val_mae: 4.1528
+Epoch 23/40
+27/27 - 5s - 187ms/step - loss: 27.0547 - mae: 3.8719 - val_loss: 38.5663 - val_mae: 4.1071
+Epoch 24/40
+27/27 - 5s - 185ms/step - loss: 26.0804 - mae: 3.7836 - val_loss: 40.3214 - val_mae: 4.2192
+Epoch 25/40
+27/27 - 5s - 185ms/step - loss: 26.1604 - mae: 3.7849 - val_loss: 39.1578 - val_mae: 4.1797
+Epoch 26/40
+27/27 - 5s - 189ms/step - loss: 25.7621 - mae: 3.7696 - val_loss: 35.8122 - val_mae: 3.9756
+Epoch 27/40
+27/27 - 5s - 190ms/step - loss: 25.7624 - mae: 3.7833 - val_loss: 35.2499 - val_mae: 3.9428
+Epoch 28/40
+27/27 - 5s - 184ms/step - loss: 26.0124 - mae: 3.7953 - val_loss: 35.4068 - val_mae: 3.9550
+Epoch 29/40
+27/27 - 5s - 187ms/step - loss: 25.7164 - mae: 3.7720 - val_loss: 32.9556 - val_mae: 3.8193
+Epoch 30/40
+27/27 - 5s - 187ms/step - loss: 25.8730 - mae: 3.7889 - val_loss: 33.2531 - val_mae: 3.8379
+Epoch 31/40
+27/27 - 5s - 189ms/step - loss: 26.1268 - mae: 3.8059 - val_loss: 33.8779 - val_mae: 3.8753
+Epoch 32/40
+27/27 - 5s - 184ms/step - loss: 27.3633 - mae: 3.9169 - val_loss: 37.5492 - val_mae: 4.1454
+Epoch 33/40
+27/27 - 5s - 183ms/step - loss: 26.1032 - mae: 3.8343 - val_loss: 33.6346 - val_mae: 3.8660
+Epoch 34/40
+27/27 - 5s - 190ms/step - loss: 25.5871 - mae: 3.7607 - val_loss: 33.0078 - val_mae: 3.8289
+Epoch 35/40
+27/27 - 5s - 186ms/step - loss: 25.5191 - mae: 3.7680 - val_loss: 31.8260 - val_mae: 3.7581
+Epoch 36/40
+27/27 - 5s - 196ms/step - loss: 25.6045 - mae: 3.7659 - val_loss: 33.8500 - val_mae: 3.8825
+Epoch 37/40
+27/27 - 5s - 188ms/step - loss: 25.7915 - mae: 3.7887 - val_loss: 30.2274 - val_mae: 3.7033
+Epoch 38/40
+27/27 - 5s - 187ms/step - loss: 26.4277 - mae: 3.8266 - val_loss: 31.5661 - val_mae: 3.7468
+Epoch 39/40
+27/27 - 5s - 186ms/step - loss: 26.2783 - mae: 3.8561 - val_loss: 32.4872 - val_mae: 3.7966
+Epoch 40/40
+27/27 - 5s - 183ms/step - loss: 25.6479 - mae: 3.7757 - val_loss: 35.6585 - val_mae: 3.9996
+
+  Fold 1: R2=0.703950  MAE=3.999600  RMSE=5.971472  | 196.6 s (4.92 s/epoca)
+
+============================================================
+Fold 2/6  | entrena 840 | valida 190 (probeta 7)
+Epoch 1/40
+27/27 - 6s - 213ms/step - loss: 911.6344 - mae: 28.5310 - val_loss: 580.1798 - val_mae: 23.0551
+Epoch 2/40
+27/27 - 5s - 192ms/step - loss: 250.1270 - mae: 12.9155 - val_loss: 54.3816 - val_mae: 6.1489
+Epoch 3/40
+27/27 - 5s - 186ms/step - loss: 92.7837 - mae: 7.3325 - val_loss: 46.3575 - val_mae: 5.5705
+Epoch 4/40
+27/27 - 5s - 183ms/step - loss: 88.1472 - mae: 7.2846 - val_loss: 45.0506 - val_mae: 5.4876
+Epoch 5/40
+27/27 - 5s - 184ms/step - loss: 86.2804 - mae: 7.1324 - val_loss: 44.8954 - val_mae: 5.5230
+Epoch 6/40
+27/27 - 5s - 189ms/step - loss: 85.6162 - mae: 7.1380 - val_loss: 42.8495 - val_mae: 5.3621
+Epoch 7/40
+27/27 - 5s - 184ms/step - loss: 81.6568 - mae: 6.9543 - val_loss: 41.1239 - val_mae: 5.2485
+Epoch 8/40
+27/27 - 5s - 182ms/step - loss: 79.8914 - mae: 6.9285 - val_loss: 39.1705 - val_mae: 5.0819
+Epoch 9/40
+27/27 - 5s - 188ms/step - loss: 76.5287 - mae: 6.6932 - val_loss: 37.7052 - val_mae: 5.0780
+Epoch 10/40
+27/27 - 5s - 185ms/step - loss: 73.8399 - mae: 6.6193 - val_loss: 35.2279 - val_mae: 4.9145
+Epoch 11/40
+27/27 - 5s - 187ms/step - loss: 70.6750 - mae: 6.4842 - val_loss: 32.1783 - val_mae: 4.6773
+Epoch 12/40
+27/27 - 5s - 185ms/step - loss: 65.7637 - mae: 6.1547 - val_loss: 28.6587 - val_mae: 4.3546
+Epoch 13/40
+27/27 - 5s - 192ms/step - loss: 61.0738 - mae: 5.9510 - val_loss: 25.5035 - val_mae: 4.0395
+Epoch 14/40
+27/27 - 5s - 184ms/step - loss: 56.4825 - mae: 5.6454 - val_loss: 23.8068 - val_mae: 4.0152
+Epoch 15/40
+27/27 - 5s - 183ms/step - loss: 50.5054 - mae: 5.3418 - val_loss: 19.1810 - val_mae: 3.5748
+Epoch 16/40
+27/27 - 5s - 188ms/step - loss: 45.1686 - mae: 5.0639 - val_loss: 15.4997 - val_mae: 3.1535
+Epoch 17/40
+27/27 - 5s - 193ms/step - loss: 42.5392 - mae: 4.7801 - val_loss: 14.0291 - val_mae: 3.0518
+Epoch 18/40
+27/27 - 5s - 183ms/step - loss: 37.7198 - mae: 4.6050 - val_loss: 12.1702 - val_mae: 2.8133
+Epoch 19/40
+27/27 - 5s - 192ms/step - loss: 34.7043 - mae: 4.4543 - val_loss: 12.8835 - val_mae: 2.7934
+Epoch 20/40
+27/27 - 5s - 193ms/step - loss: 34.0773 - mae: 4.3178 - val_loss: 11.7442 - val_mae: 2.7226
+Epoch 21/40
+27/27 - 5s - 190ms/step - loss: 32.5505 - mae: 4.2569 - val_loss: 12.1667 - val_mae: 2.7448
+Epoch 22/40
+27/27 - 5s - 187ms/step - loss: 31.9244 - mae: 4.2491 - val_loss: 13.0907 - val_mae: 2.8295
+Epoch 23/40
+27/27 - 5s - 185ms/step - loss: 30.5550 - mae: 4.1708 - val_loss: 12.2551 - val_mae: 2.6972
+Epoch 24/40
+27/27 - 5s - 185ms/step - loss: 31.0635 - mae: 4.1931 - val_loss: 12.2577 - val_mae: 2.6886
+Epoch 25/40
+27/27 - 5s - 190ms/step - loss: 30.1914 - mae: 4.1131 - val_loss: 12.3781 - val_mae: 2.6683
+Epoch 26/40
+27/27 - 5s - 192ms/step - loss: 31.7016 - mae: 4.2521 - val_loss: 13.4716 - val_mae: 2.8788
+Epoch 27/40
+27/27 - 5s - 187ms/step - loss: 31.6816 - mae: 4.2798 - val_loss: 12.7382 - val_mae: 2.6979
+Epoch 28/40
+27/27 - 5s - 184ms/step - loss: 30.0231 - mae: 4.0718 - val_loss: 14.6629 - val_mae: 2.9138
+Epoch 29/40
+27/27 - 5s - 185ms/step - loss: 29.9515 - mae: 4.0823 - val_loss: 12.3745 - val_mae: 2.7095
+Epoch 30/40
+27/27 - 5s - 185ms/step - loss: 30.3835 - mae: 4.1293 - val_loss: 14.6173 - val_mae: 2.9031
+Epoch 31/40
+27/27 - 5s - 185ms/step - loss: 30.3300 - mae: 4.1536 - val_loss: 12.5587 - val_mae: 2.7240
+Epoch 32/40
+27/27 - 5s - 178ms/step - loss: 30.4985 - mae: 4.1170 - val_loss: 12.4605 - val_mae: 2.6785
+Epoch 33/40
+27/27 - 5s - 182ms/step - loss: 29.6271 - mae: 4.0886 - val_loss: 16.0621 - val_mae: 3.2374
+Epoch 34/40
+27/27 - 5s - 186ms/step - loss: 31.4453 - mae: 4.1916 - val_loss: 16.9360 - val_mae: 3.1679
+Epoch 35/40
+27/27 - 5s - 187ms/step - loss: 30.4068 - mae: 4.1334 - val_loss: 14.7383 - val_mae: 2.8988
+Epoch 36/40
+27/27 - 5s - 182ms/step - loss: 30.3733 - mae: 4.1216 - val_loss: 13.1051 - val_mae: 2.7330
+Epoch 37/40
+27/27 - 5s - 181ms/step - loss: 29.9110 - mae: 4.1077 - val_loss: 13.3771 - val_mae: 2.7558
+Epoch 38/40
+27/27 - 5s - 182ms/step - loss: 30.1423 - mae: 4.1045 - val_loss: 13.8767 - val_mae: 2.9348
+Epoch 39/40
+27/27 - 5s - 180ms/step - loss: 33.0560 - mae: 4.3819 - val_loss: 13.2396 - val_mae: 2.7456
+Epoch 40/40
+27/27 - 5s - 180ms/step - loss: 29.8215 - mae: 4.0725 - val_loss: 12.5984 - val_mae: 2.7078
+
+  Fold 2: R2=0.764069  MAE=2.707754  RMSE=3.549423  | 201.5 s (5.04 s/epoca)
+
+============================================================
+Fold 3/6  | entrena 845 | valida 185 (probeta 10)
+Epoch 1/40
+27/27 - 6s - 209ms/step - loss: 894.4822 - mae: 28.4441 - val_loss: 809.8757 - val_mae: 26.6505
+Epoch 2/40
+27/27 - 5s - 183ms/step - loss: 263.9588 - mae: 13.0984 - val_loss: 81.4836 - val_mae: 6.9323
+Epoch 3/40
+27/27 - 5s - 179ms/step - loss: 82.0811 - mae: 6.8354 - val_loss: 88.6929 - val_mae: 6.8909
+Epoch 4/40
+27/27 - 5s - 178ms/step - loss: 77.3736 - mae: 6.8141 - val_loss: 92.5939 - val_mae: 6.9296
+Epoch 5/40
+27/27 - 5s - 181ms/step - loss: 74.5136 - mae: 6.6264 - val_loss: 98.2749 - val_mae: 7.0500
+Epoch 6/40
+27/27 - 5s - 182ms/step - loss: 73.2551 - mae: 6.5747 - val_loss: 98.2803 - val_mae: 7.0291
+Epoch 7/40
+27/27 - 5s - 183ms/step - loss: 71.0164 - mae: 6.4764 - val_loss: 94.8318 - val_mae: 6.8960
+Epoch 8/40
+27/27 - 5s - 181ms/step - loss: 68.7053 - mae: 6.3980 - val_loss: 86.5538 - val_mae: 6.6211
+Epoch 9/40
+27/27 - 5s - 180ms/step - loss: 66.4472 - mae: 6.1963 - val_loss: 89.0892 - val_mae: 6.6506
+Epoch 10/40
+27/27 - 5s - 186ms/step - loss: 62.1753 - mae: 6.0185 - val_loss: 85.3345 - val_mae: 6.4843
+Epoch 11/40
+27/27 - 5s - 180ms/step - loss: 59.1014 - mae: 5.7885 - val_loss: 85.9091 - val_mae: 6.4730
+Epoch 12/40
+27/27 - 5s - 180ms/step - loss: 54.2546 - mae: 5.5446 - val_loss: 70.0408 - val_mae: 5.8179
+Epoch 13/40
+27/27 - 5s - 180ms/step - loss: 49.3620 - mae: 5.3065 - val_loss: 68.4979 - val_mae: 5.7028
+Epoch 14/40
+27/27 - 5s - 181ms/step - loss: 44.6718 - mae: 5.0227 - val_loss: 54.0179 - val_mae: 5.0295
+Epoch 15/40
+27/27 - 5s - 181ms/step - loss: 39.3555 - mae: 4.6817 - val_loss: 48.2041 - val_mae: 4.7125
+Epoch 16/40
+27/27 - 5s - 179ms/step - loss: 36.1482 - mae: 4.4767 - val_loss: 56.6480 - val_mae: 5.2065
+Epoch 17/40
+27/27 - 5s - 181ms/step - loss: 32.1294 - mae: 4.2087 - val_loss: 48.3538 - val_mae: 4.7562
+Epoch 18/40
+27/27 - 5s - 180ms/step - loss: 30.0795 - mae: 4.0340 - val_loss: 42.4467 - val_mae: 4.4414
+Epoch 19/40
+27/27 - 5s - 179ms/step - loss: 27.9840 - mae: 3.8953 - val_loss: 36.4825 - val_mae: 4.1523
+Epoch 20/40
+27/27 - 5s - 179ms/step - loss: 27.5871 - mae: 3.9068 - val_loss: 46.5653 - val_mae: 4.8930
+Epoch 21/40
+27/27 - 5s - 180ms/step - loss: 26.2883 - mae: 3.7919 - val_loss: 30.9707 - val_mae: 3.9129
+Epoch 22/40
+27/27 - 5s - 182ms/step - loss: 27.0059 - mae: 3.8637 - val_loss: 39.6207 - val_mae: 4.4266
+Epoch 23/40
+27/27 - 5s - 182ms/step - loss: 25.3768 - mae: 3.7517 - val_loss: 32.7370 - val_mae: 4.0456
+Epoch 24/40
+27/27 - 5s - 181ms/step - loss: 26.7178 - mae: 3.8566 - val_loss: 36.2489 - val_mae: 4.2389
+Epoch 25/40
+27/27 - 5s - 181ms/step - loss: 25.1370 - mae: 3.7572 - val_loss: 35.2298 - val_mae: 4.2007
+Epoch 26/40
+27/27 - 5s - 181ms/step - loss: 24.6309 - mae: 3.6774 - val_loss: 32.5204 - val_mae: 4.0600
+Epoch 27/40
+27/27 - 5s - 181ms/step - loss: 25.5354 - mae: 3.7630 - val_loss: 37.2946 - val_mae: 4.3199
+Epoch 28/40
+27/27 - 5s - 180ms/step - loss: 24.8769 - mae: 3.6852 - val_loss: 34.9789 - val_mae: 4.1992
+Epoch 29/40
+27/27 - 5s - 179ms/step - loss: 24.7242 - mae: 3.6892 - val_loss: 35.2747 - val_mae: 4.2246
+Epoch 30/40
+27/27 - 5s - 179ms/step - loss: 24.2142 - mae: 3.6346 - val_loss: 31.7080 - val_mae: 4.0695
+Epoch 31/40
+27/27 - 5s - 180ms/step - loss: 24.8406 - mae: 3.7025 - val_loss: 40.6020 - val_mae: 4.5239
+Epoch 32/40
+27/27 - 5s - 179ms/step - loss: 24.7941 - mae: 3.7072 - val_loss: 30.6030 - val_mae: 4.0566
+Epoch 33/40
+27/27 - 5s - 181ms/step - loss: 25.2665 - mae: 3.7356 - val_loss: 37.7990 - val_mae: 4.3710
+Epoch 34/40
+27/27 - 5s - 181ms/step - loss: 24.8288 - mae: 3.6757 - val_loss: 36.3042 - val_mae: 4.3008
+Epoch 35/40
+27/27 - 5s - 181ms/step - loss: 24.5574 - mae: 3.6943 - val_loss: 35.6084 - val_mae: 4.2588
+Epoch 36/40
+27/27 - 5s - 181ms/step - loss: 24.5767 - mae: 3.6874 - val_loss: 34.5367 - val_mae: 4.2120
+Epoch 37/40
+27/27 - 5s - 180ms/step - loss: 24.6440 - mae: 3.6673 - val_loss: 42.0555 - val_mae: 4.6148
+Epoch 38/40
+27/27 - 5s - 181ms/step - loss: 25.7987 - mae: 3.8088 - val_loss: 34.1152 - val_mae: 4.1982
+Epoch 39/40
+27/27 - 5s - 179ms/step - loss: 24.7467 - mae: 3.6685 - val_loss: 34.6328 - val_mae: 4.2253
+Epoch 40/40
+27/27 - 5s - 181ms/step - loss: 24.4459 - mae: 3.6500 - val_loss: 33.0376 - val_mae: 4.1577
+
+  Fold 3: R2=0.691792  MAE=4.157682  RMSE=5.747834  | 195.8 s (4.90 s/epoca)
+
+============================================================
+Fold 4/6  | entrena 851 | valida 179 (probeta 9)
+Epoch 1/40
+27/27 - 6s - 210ms/step - loss: 917.7932 - mae: 28.7953 - val_loss: 828.0135 - val_mae: 27.2870
+Epoch 2/40
+27/27 - 5s - 180ms/step - loss: 307.7113 - mae: 14.2958 - val_loss: 65.6644 - val_mae: 6.6460
+Epoch 3/40
+27/27 - 5s - 184ms/step - loss: 85.4023 - mae: 7.0250 - val_loss: 81.8487 - val_mae: 6.5795
+Epoch 4/40
+27/27 - 5s - 180ms/step - loss: 78.4903 - mae: 6.7593 - val_loss: 91.6011 - val_mae: 6.9009
+Epoch 5/40
+27/27 - 5s - 183ms/step - loss: 77.4695 - mae: 6.7149 - val_loss: 84.9065 - val_mae: 6.6422
+Epoch 6/40
+27/27 - 5s - 189ms/step - loss: 76.0489 - mae: 6.6853 - val_loss: 100.5083 - val_mae: 7.2480
+Epoch 7/40
+27/27 - 5s - 180ms/step - loss: 75.6708 - mae: 6.5709 - val_loss: 89.4459 - val_mae: 6.7843
+Epoch 8/40
+27/27 - 5s - 184ms/step - loss: 72.6393 - mae: 6.5350 - val_loss: 91.4971 - val_mae: 6.8720
+Epoch 9/40
+27/27 - 5s - 179ms/step - loss: 71.0237 - mae: 6.3461 - val_loss: 77.4068 - val_mae: 6.2836
+Epoch 10/40
+27/27 - 5s - 181ms/step - loss: 67.5517 - mae: 6.1668 - val_loss: 63.9699 - val_mae: 5.8254
+Epoch 11/40
+27/27 - 5s - 179ms/step - loss: 64.5088 - mae: 6.0320 - val_loss: 62.9308 - val_mae: 5.7179
+Epoch 12/40
+27/27 - 5s - 182ms/step - loss: 61.9271 - mae: 5.9539 - val_loss: 63.2807 - val_mae: 5.6679
+Epoch 13/40
+27/27 - 5s - 181ms/step - loss: 58.0457 - mae: 5.6465 - val_loss: 51.4350 - val_mae: 5.1877
+Epoch 14/40
+27/27 - 5s - 181ms/step - loss: 53.5674 - mae: 5.4443 - val_loss: 52.8946 - val_mae: 5.1640
+Epoch 15/40
+27/27 - 5s - 181ms/step - loss: 47.3237 - mae: 5.0215 - val_loss: 57.5523 - val_mae: 5.3973
+Epoch 16/40
+27/27 - 5s - 182ms/step - loss: 44.3100 - mae: 4.7746 - val_loss: 44.3810 - val_mae: 4.7149
+Epoch 17/40
+27/27 - 5s - 182ms/step - loss: 38.8244 - mae: 4.4927 - val_loss: 42.6993 - val_mae: 4.6374
+Epoch 18/40
+27/27 - 5s - 185ms/step - loss: 35.5327 - mae: 4.2321 - val_loss: 44.0745 - val_mae: 4.7396
+Epoch 19/40
+27/27 - 5s - 184ms/step - loss: 32.0415 - mae: 4.0279 - val_loss: 32.2166 - val_mae: 4.1960
+Epoch 20/40
+27/27 - 5s - 181ms/step - loss: 29.1655 - mae: 3.8407 - val_loss: 31.1863 - val_mae: 4.2146
+Epoch 21/40
+27/27 - 5s - 180ms/step - loss: 28.5130 - mae: 3.9055 - val_loss: 33.5563 - val_mae: 4.3858
+Epoch 22/40
+27/27 - 5s - 181ms/step - loss: 26.6818 - mae: 3.6951 - val_loss: 37.2783 - val_mae: 4.6204
+Epoch 23/40
+27/27 - 5s - 181ms/step - loss: 26.0800 - mae: 3.6738 - val_loss: 33.2135 - val_mae: 4.5155
+Epoch 24/40
+27/27 - 5s - 183ms/step - loss: 26.0435 - mae: 3.6676 - val_loss: 32.1027 - val_mae: 4.5259
+Epoch 25/40
+27/27 - 5s - 181ms/step - loss: 25.5060 - mae: 3.6550 - val_loss: 33.9736 - val_mae: 4.6363
+Epoch 26/40
+27/27 - 5s - 180ms/step - loss: 25.4283 - mae: 3.6512 - val_loss: 37.9203 - val_mae: 4.8317
+Epoch 27/40
+27/27 - 5s - 183ms/step - loss: 26.1389 - mae: 3.7202 - val_loss: 35.9428 - val_mae: 4.7380
+Epoch 28/40
+27/27 - 5s - 181ms/step - loss: 25.2051 - mae: 3.6140 - val_loss: 41.2547 - val_mae: 5.0059
+Epoch 29/40
+27/27 - 5s - 181ms/step - loss: 25.8333 - mae: 3.7134 - val_loss: 33.8667 - val_mae: 4.6845
+Epoch 30/40
+27/27 - 5s - 181ms/step - loss: 25.6049 - mae: 3.6810 - val_loss: 35.9505 - val_mae: 4.7791
+Epoch 31/40
+27/27 - 5s - 186ms/step - loss: 24.8072 - mae: 3.5869 - val_loss: 34.0794 - val_mae: 4.7024
+Epoch 32/40
+27/27 - 5s - 182ms/step - loss: 25.1321 - mae: 3.6246 - val_loss: 35.8085 - val_mae: 4.7792
+Epoch 33/40
+27/27 - 5s - 181ms/step - loss: 25.3825 - mae: 3.6564 - val_loss: 35.2601 - val_mae: 4.7545
+Epoch 34/40
+27/27 - 5s - 182ms/step - loss: 24.9054 - mae: 3.5810 - val_loss: 34.3102 - val_mae: 4.7252
+Epoch 35/40
+27/27 - 5s - 183ms/step - loss: 25.6510 - mae: 3.6444 - val_loss: 36.7571 - val_mae: 4.8268
+Epoch 36/40
+27/27 - 5s - 181ms/step - loss: 25.1807 - mae: 3.6520 - val_loss: 37.5921 - val_mae: 4.8632
+Epoch 37/40
+27/27 - 5s - 181ms/step - loss: 25.3100 - mae: 3.6480 - val_loss: 38.6907 - val_mae: 4.9195
+Epoch 38/40
+27/27 - 5s - 180ms/step - loss: 25.0461 - mae: 3.6144 - val_loss: 34.5732 - val_mae: 4.7356
+Epoch 39/40
+27/27 - 5s - 185ms/step - loss: 24.9019 - mae: 3.6054 - val_loss: 34.1734 - val_mae: 4.7239
+Epoch 40/40
+27/27 - 5s - 181ms/step - loss: 24.8311 - mae: 3.5949 - val_loss: 35.2757 - val_mae: 4.7518
+WARNING:tensorflow:5 out of the last 13 calls to <function 
+TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x000002A326650400> triggered 
+tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating 
+@tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of 
+tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True 
+option that can avoid unnecessary retracing. For (3), please refer to 
+https://www.tensorflow.org/guide/function#controlling_retracing and 
+https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+
+  Fold 4: R2=0.602069  MAE=4.751756  RMSE=5.939338  | 197.2 s (4.93 s/epoca)
+
+============================================================
+Fold 5/6  | entrena 887 | valida 143 (probeta 5)
+Epoch 1/40
+28/28 - 6s - 212ms/step - loss: 939.5106 - mae: 29.1299 - val_loss: 551.0054 - val_mae: 22.3414
+Epoch 2/40
+28/28 - 5s - 179ms/step - loss: 277.1283 - mae: 13.4521 - val_loss: 132.0837 - val_mae: 10.4385
+Epoch 3/40
+28/28 - 5s - 181ms/step - loss: 86.6509 - mae: 7.1152 - val_loss: 111.7006 - val_mae: 9.4869
+Epoch 4/40
+28/28 - 5s - 179ms/step - loss: 80.7522 - mae: 6.9809 - val_loss: 82.5379 - val_mae: 8.0289
+Epoch 5/40
+28/28 - 5s - 179ms/step - loss: 78.7012 - mae: 6.8537 - val_loss: 90.1293 - val_mae: 8.4135
+Epoch 6/40
+28/28 - 5s - 180ms/step - loss: 77.3456 - mae: 6.8638 - val_loss: 77.4533 - val_mae: 7.7669
+Epoch 7/40
+28/28 - 5s - 180ms/step - loss: 75.1689 - mae: 6.6623 - val_loss: 107.5654 - val_mae: 9.3437
+Epoch 8/40
+28/28 - 5s - 180ms/step - loss: 74.8704 - mae: 6.7725 - val_loss: 73.3147 - val_mae: 7.5487
+Epoch 9/40
+28/28 - 5s - 179ms/step - loss: 71.9840 - mae: 6.5437 - val_loss: 55.8876 - val_mae: 6.5295
+Epoch 10/40
+28/28 - 5s - 178ms/step - loss: 69.6234 - mae: 6.4511 - val_loss: 75.2895 - val_mae: 7.6997
+Epoch 11/40
+28/28 - 5s - 181ms/step - loss: 65.3207 - mae: 6.2177 - val_loss: 61.8243 - val_mae: 6.9153
+Epoch 12/40
+28/28 - 5s - 177ms/step - loss: 61.4009 - mae: 5.9770 - val_loss: 67.4060 - val_mae: 7.3218
+Epoch 13/40
+28/28 - 5s - 180ms/step - loss: 58.0471 - mae: 5.8466 - val_loss: 51.8502 - val_mae: 6.3446
+Epoch 14/40
+28/28 - 5s - 181ms/step - loss: 52.5048 - mae: 5.4669 - val_loss: 39.9939 - val_mae: 5.4936
+Epoch 15/40
+28/28 - 5s - 183ms/step - loss: 48.5614 - mae: 5.1821 - val_loss: 66.3670 - val_mae: 7.5073
+Epoch 16/40
+28/28 - 5s - 179ms/step - loss: 42.9229 - mae: 4.9214 - val_loss: 51.1249 - val_mae: 6.5167
+Epoch 17/40
+28/28 - 5s - 179ms/step - loss: 38.4246 - mae: 4.6145 - val_loss: 34.5596 - val_mae: 5.1873
+Epoch 18/40
+28/28 - 5s - 180ms/step - loss: 36.1695 - mae: 4.4828 - val_loss: 36.9197 - val_mae: 5.4045
+Epoch 19/40
+28/28 - 5s - 180ms/step - loss: 32.7485 - mae: 4.1987 - val_loss: 29.5261 - val_mae: 4.6815
+Epoch 20/40
+28/28 - 5s - 179ms/step - loss: 30.3150 - mae: 4.0528 - val_loss: 43.4068 - val_mae: 5.8601
+Epoch 21/40
+28/28 - 5s - 178ms/step - loss: 30.2673 - mae: 4.1069 - val_loss: 35.3273 - val_mae: 5.1160
+Epoch 22/40
+28/28 - 5s - 178ms/step - loss: 28.1879 - mae: 3.8999 - val_loss: 24.9909 - val_mae: 4.0963
+Epoch 23/40
+28/28 - 5s - 180ms/step - loss: 28.8650 - mae: 3.9856 - val_loss: 40.5152 - val_mae: 5.4898
+Epoch 24/40
+28/28 - 5s - 179ms/step - loss: 27.8851 - mae: 3.9065 - val_loss: 33.2891 - val_mae: 4.8290
+Epoch 25/40
+28/28 - 5s - 179ms/step - loss: 27.4742 - mae: 3.8665 - val_loss: 23.5604 - val_mae: 3.9001
+Epoch 26/40
+28/28 - 5s - 179ms/step - loss: 27.6024 - mae: 3.8685 - val_loss: 31.2019 - val_mae: 4.5950
+Epoch 27/40
+28/28 - 5s - 182ms/step - loss: 27.3273 - mae: 3.8469 - val_loss: 22.8496 - val_mae: 3.8166
+Epoch 28/40
+28/28 - 5s - 178ms/step - loss: 27.2622 - mae: 3.8309 - val_loss: 34.2772 - val_mae: 4.8641
+Epoch 29/40
+28/28 - 5s - 178ms/step - loss: 27.3696 - mae: 3.8600 - val_loss: 21.7955 - val_mae: 3.7055
+Epoch 30/40
+28/28 - 5s - 177ms/step - loss: 27.3275 - mae: 3.8408 - val_loss: 25.3084 - val_mae: 4.0320
+Epoch 31/40
+28/28 - 5s - 175ms/step - loss: 27.3546 - mae: 3.8627 - val_loss: 32.8347 - val_mae: 4.7226
+Epoch 32/40
+28/28 - 5s - 178ms/step - loss: 27.3907 - mae: 3.8533 - val_loss: 34.4731 - val_mae: 4.8724
+Epoch 33/40
+28/28 - 5s - 177ms/step - loss: 26.8370 - mae: 3.8052 - val_loss: 33.1532 - val_mae: 4.7504
+Epoch 34/40
+28/28 - 5s - 185ms/step - loss: 26.9246 - mae: 3.8415 - val_loss: 24.9227 - val_mae: 4.0070
+Epoch 35/40
+28/28 - 5s - 191ms/step - loss: 27.1918 - mae: 3.8343 - val_loss: 25.2426 - val_mae: 4.0344
+Epoch 36/40
+28/28 - 6s - 204ms/step - loss: 27.0700 - mae: 3.8166 - val_loss: 29.1223 - val_mae: 4.4035
+Epoch 37/40
+28/28 - 5s - 185ms/step - loss: 27.4166 - mae: 3.8649 - val_loss: 28.3984 - val_mae: 4.3222
+Epoch 38/40
+28/28 - 5s - 190ms/step - loss: 26.8336 - mae: 3.8203 - val_loss: 25.9337 - val_mae: 4.0917
+Epoch 39/40
+28/28 - 5s - 185ms/step - loss: 27.1946 - mae: 3.8434 - val_loss: 25.6608 - val_mae: 4.0686
+Epoch 40/40
+28/28 - 5s - 184ms/step - loss: 27.1659 - mae: 3.8516 - val_loss: 26.3270 - val_mae: 4.1420
+WARNING:tensorflow:5 out of the last 13 calls to <function 
+TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x000002A3268037E0> triggered 
+tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating 
+@tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of 
+tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True 
+option that can avoid unnecessary retracing. For (3), please refer to 
+https://www.tensorflow.org/guide/function#controlling_retracing and 
+https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+
+  Fold 5: R2=0.560253  MAE=4.142034  RMSE=5.130987  | 203.6 s (5.09 s/epoca)
+
+============================================================
+Fold 6/6  | entrena 889 | valida 141 (probeta 6)
+Epoch 1/40
+28/28 - 6s - 212ms/step - loss: 935.3949 - mae: 29.0925 - val_loss: 653.2066 - val_mae: 23.9172
+Epoch 2/40
+28/28 - 5s - 184ms/step - loss: 335.0699 - mae: 15.0596 - val_loss: 273.7855 - val_mae: 15.5834
+Epoch 3/40
+28/28 - 5s - 180ms/step - loss: 92.2637 - mae: 7.3630 - val_loss: 100.5849 - val_mae: 9.1536
+Epoch 4/40
+28/28 - 5s - 180ms/step - loss: 82.7387 - mae: 7.0418 - val_loss: 84.4816 - val_mae: 8.3613
+Epoch 5/40
+28/28 - 5s - 181ms/step - loss: 82.0345 - mae: 6.9895 - val_loss: 69.4483 - val_mae: 7.4943
+Epoch 6/40
+28/28 - 5s - 180ms/step - loss: 80.7405 - mae: 6.8426 - val_loss: 57.6071 - val_mae: 6.6345
+Epoch 7/40
+28/28 - 5s - 182ms/step - loss: 78.3643 - mae: 6.7417 - val_loss: 79.5542 - val_mae: 8.0999
+Epoch 8/40
+28/28 - 5s - 179ms/step - loss: 76.4493 - mae: 6.7127 - val_loss: 74.8373 - val_mae: 7.8368
+Epoch 9/40
+28/28 - 5s - 181ms/step - loss: 73.9871 - mae: 6.6147 - val_loss: 61.8604 - val_mae: 7.0120
+Epoch 10/40
+28/28 - 5s - 185ms/step - loss: 71.6088 - mae: 6.4964 - val_loss: 61.1170 - val_mae: 6.9743
+Epoch 11/40
+28/28 - 5s - 181ms/step - loss: 68.6143 - mae: 6.2740 - val_loss: 55.5804 - val_mae: 6.5864
+Epoch 12/40
+28/28 - 5s - 179ms/step - loss: 66.2911 - mae: 6.1396 - val_loss: 61.3773 - val_mae: 7.0170
+Epoch 13/40
+28/28 - 5s - 180ms/step - loss: 60.3927 - mae: 5.8535 - val_loss: 79.6185 - val_mae: 8.1664
+Epoch 14/40
+28/28 - 5s - 179ms/step - loss: 56.1480 - mae: 5.6097 - val_loss: 52.8876 - val_mae: 6.4378
+Epoch 15/40
+28/28 - 5s - 181ms/step - loss: 49.7995 - mae: 5.2495 - val_loss: 48.0444 - val_mae: 6.0827
+Epoch 16/40
+28/28 - 5s - 179ms/step - loss: 44.3748 - mae: 4.8873 - val_loss: 68.8861 - val_mae: 7.5720
+Epoch 17/40
+28/28 - 5s - 181ms/step - loss: 39.9269 - mae: 4.6092 - val_loss: 45.7483 - val_mae: 5.9057
+Epoch 18/40
+28/28 - 5s - 181ms/step - loss: 35.4964 - mae: 4.3467 - val_loss: 31.2241 - val_mae: 4.5938
+Epoch 19/40
+28/28 - 5s - 179ms/step - loss: 32.5234 - mae: 4.1503 - val_loss: 38.3189 - val_mae: 5.2005
+Epoch 20/40
+28/28 - 5s - 180ms/step - loss: 29.6239 - mae: 3.9456 - val_loss: 35.4441 - val_mae: 4.8965
+Epoch 21/40
+28/28 - 5s - 181ms/step - loss: 27.6414 - mae: 3.8418 - val_loss: 25.4032 - val_mae: 3.9256
+Epoch 22/40
+28/28 - 5s - 180ms/step - loss: 27.2156 - mae: 3.7952 - val_loss: 35.5716 - val_mae: 4.8180
+Epoch 23/40
+28/28 - 5s - 179ms/step - loss: 26.5381 - mae: 3.7895 - val_loss: 31.4835 - val_mae: 4.4416
+Epoch 24/40
+28/28 - 5s - 180ms/step - loss: 26.4867 - mae: 3.7853 - val_loss: 40.0976 - val_mae: 5.1178
+Epoch 25/40
+28/28 - 5s - 179ms/step - loss: 26.4848 - mae: 3.8083 - val_loss: 27.3810 - val_mae: 4.0599
+Epoch 26/40
+28/28 - 5s - 180ms/step - loss: 26.1695 - mae: 3.7803 - val_loss: 30.4082 - val_mae: 4.3045
+Epoch 27/40
+28/28 - 5s - 182ms/step - loss: 25.9692 - mae: 3.7216 - val_loss: 34.4364 - val_mae: 4.6433
+Epoch 28/40
+28/28 - 5s - 179ms/step - loss: 26.0685 - mae: 3.7657 - val_loss: 35.3773 - val_mae: 4.7137
+Epoch 29/40
+28/28 - 5s - 183ms/step - loss: 25.7949 - mae: 3.7550 - val_loss: 28.3505 - val_mae: 4.1248
+Epoch 30/40
+28/28 - 5s - 180ms/step - loss: 26.1063 - mae: 3.7754 - val_loss: 37.6939 - val_mae: 4.9029
+Epoch 31/40
+28/28 - 5s - 179ms/step - loss: 25.8554 - mae: 3.7470 - val_loss: 30.0942 - val_mae: 4.2737
+Epoch 32/40
+28/28 - 5s - 182ms/step - loss: 25.7602 - mae: 3.7748 - val_loss: 31.0598 - val_mae: 4.3462
+Epoch 33/40
+28/28 - 5s - 181ms/step - loss: 25.5529 - mae: 3.7231 - val_loss: 37.9812 - val_mae: 4.9295
+Epoch 34/40
+28/28 - 5s - 181ms/step - loss: 25.8362 - mae: 3.7440 - val_loss: 31.8506 - val_mae: 4.4216
+Epoch 35/40
+28/28 - 5s - 178ms/step - loss: 26.1354 - mae: 3.7608 - val_loss: 33.4877 - val_mae: 4.5653
+Epoch 36/40
+28/28 - 5s - 179ms/step - loss: 25.7134 - mae: 3.7336 - val_loss: 28.4432 - val_mae: 4.1367
+Epoch 37/40
+28/28 - 5s - 180ms/step - loss: 25.7986 - mae: 3.7543 - val_loss: 27.6201 - val_mae: 4.0513
+Epoch 38/40
+28/28 - 5s - 179ms/step - loss: 27.7515 - mae: 3.9183 - val_loss: 47.6733 - val_mae: 5.6478
+Epoch 39/40
+28/28 - 5s - 179ms/step - loss: 26.4439 - mae: 3.7987 - val_loss: 33.9682 - val_mae: 4.5989
+Epoch 40/40
+28/28 - 5s - 180ms/step - loss: 25.6263 - mae: 3.7484 - val_loss: 34.0664 - val_mae: 4.6120
+
+  Fold 6: R2=0.619572  MAE=4.612042  RMSE=5.836643  | 202.9 s (5.07 s/epoca)
+
+==============================================================================
+      Fold  Probeta  n_val       R2      MAE     RMSE  segundos  s_por_epoca
+         1      8.0  192.0 0.703950 3.999600 5.971472     196.6         4.92
+         2      7.0  190.0 0.764069 2.707754 3.549423     201.5         5.04
+         3     10.0  185.0 0.691792 4.157682 5.747834     195.8         4.90
+         4      9.0  179.0 0.602069 4.751756 5.939338     197.2         4.93
+         5      5.0  143.0 0.560253 4.142034 5.130987     203.6         5.09
+         6      6.0  141.0 0.619572 4.612042 5.836643     202.9         5.07
+     Media      NaN    NaN 0.656951 4.061812 5.362616    1197.6          NaN
+Desv. Est.      NaN    NaN 0.075706 0.725499 0.939971       NaN          NaN
+
+Tiempo total: 20.0 min
+Salidas en: <PROJECT_ROOT>/src/3_entrenamiento\resultados_barrido\A_25.7k_seed10_limpio_Rz

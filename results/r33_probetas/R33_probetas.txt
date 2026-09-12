@@ -1,0 +1,90 @@
+Dataset: <PROJECT_ROOT>/data/fotos_recortes\DATASET.xlsx
+Probetas: [np.int64(5), np.int64(6), np.int64(7), np.int64(8), np.int64(9), np.int64(10), np.int64(11)]   (la 11 es el test independiente)
+Granos: [np.int64(40), np.int64(80), np.int64(120), np.int64(180)]
+
+==============================================================================
+1. Ra POR PROBETA -- mediciones del rugosimetro, sin modelo
+==============================================================================
+
+ probeta     n    media  mediana      DE     IQR     min     max   rango
+       5   143    4.025    3.788   1.430   2.042   2.082   8.098   6.016
+       6   141    4.101    3.631   1.676   2.135   1.750   9.257   7.507
+       7   190    4.108    3.635   1.360   2.228   2.237   7.310   5.074
+       8   192    4.499    3.648   2.049   2.405   1.801   9.834   8.033
+       9   179    4.403    3.912   1.745   2.245   2.056   9.503   7.447
+      10   185    4.395    3.691   1.795   2.549   2.200   9.214   7.014
+      11   190    4.262    3.598   1.753   2.310   2.139   9.198   7.059  <- TEST
+
+Las 6 de entrenamiento: DE entre 1.360 y 2.049 (media 1.676)
+La probeta 11:        DE = 1.753
+  -> La 11 cae DENTRO del rango de las 6. No es atipica en dispersion global.
+
+==============================================================================
+2. ¿ES ATIPICA? -- comparacion DENTRO de cada grano
+==============================================================================
+La rugosidad depende sobre todo del grano, asi que comparar Ra global entre
+probetas mezcla cuatro poblaciones distintas. La comparacion justa es por grano.
+
+--- Grano P40  (n = 311)
+ probeta     n    media      DE     IQR     min     max
+       5    36    6.027   0.879   1.025   4.761   8.098
+       6    35    6.408   1.374   2.029   4.459   9.257
+       7    48    6.000   0.588   0.729   4.919   7.310
+       8    48    7.570   1.288   1.822   4.449   9.834
+       9    48    6.608   1.517   2.427   4.426   9.503
+      10    48    6.935   1.274   1.878   5.097   9.214
+      11    48    6.840   0.982   0.921   5.188   9.198  <- TEST
+  Kruskal-Wallis (¿misma mediana?)   H =  50.70   p = 3.40e-09
+  Brown-Forsythe (¿misma dispersion?) W =   8.82   p = 7.06e-09
+
+--- Grano P80  (n = 303)
+ probeta     n    media      DE     IQR     min     max
+       5    36    4.360   0.353   0.490   3.509   5.038
+       6    36    4.347   0.527   0.729   3.380   5.444
+       7    46    4.590   0.444   0.505   3.943   5.973
+       8    48    4.643   0.460   0.535   3.579   5.762
+       9    44    4.639   0.675   0.988   3.646   5.865
+      10    47    4.472   0.633   0.811   3.425   5.793
+      11    46    4.475   0.552   0.711   3.572   5.976  <- TEST
+  Kruskal-Wallis (¿misma mediana?)   H =  12.25   p = 5.66e-02
+  Brown-Forsythe (¿misma dispersion?) W =   4.32   p = 3.36e-04
+
+--- Grano P120  (n = 297)
+ probeta     n    media      DE     IQR     min     max
+       5    35    3.018   0.326   0.291   2.570   3.913
+       6    36    2.956   0.382   0.594   2.435   3.871
+       7    48    3.024   0.256   0.308   2.569   3.616
+       8    48    2.893   0.326   0.494   2.391   3.512
+       9    40    3.175   0.398   0.490   2.475   3.937
+      10    42    3.070   0.374   0.732   2.545   3.742
+      11    48    3.018   0.260   0.233   2.508   3.688  <- TEST
+  Kruskal-Wallis (¿misma mediana?)   H =  13.59   p = 3.46e-02
+  Brown-Forsythe (¿misma dispersion?) W =   3.49   p = 2.38e-03
+
+--- Grano P180  (n = 309)
+ probeta     n    media      DE     IQR     min     max
+       5    36    2.668   0.379   0.506   2.082   3.544
+       6    34    2.680   0.552   0.761   1.750   3.780
+       7    48    2.836   0.323   0.409   2.237   3.653
+       8    48    2.888   0.386   0.577   1.801   3.903
+       9    47    2.975   0.590   0.842   2.056   4.017
+      10    48    2.940   0.393   0.520   2.200   3.842
+      11    48    2.722   0.455   0.486   2.139   3.847  <- TEST
+  Kruskal-Wallis (¿misma mediana?)   H =  20.54   p = 2.22e-03
+  Brown-Forsythe (¿misma dispersion?) W =   5.04   p = 6.13e-05
+
+------------------------------------------------------------------------------
+¿En que lugar queda la dispersion de la probeta 11, grano por grano?
+(puesto 1 = la MENOS dispersa de las 7 -- que es lo que predice la hipotesis)
+
+  grano   DE de la 11   puesto DE   IQR de la 11   puesto IQR
+    P40         0.982      3 de 7          0.921       2 de 7
+    P80         0.552      5 de 7          0.711       4 de 7
+   P120         0.260      2 de 7          0.233       1 de 7
+   P180         0.455      5 de 7          0.486       2 de 7
+
+Puesto medio de la 11 en dispersion: 3.75 de 7 (DE) · 2.25 (IQR)
+-> Cerca del puesto neutro (4.0): la probeta 11 NO destaca en dispersion.
+   La hipotesis de «probeta facil por falta de extremos» NO se sostiene con estos datos.
+
+Figura: <PROJECT_ROOT>/src/resultados\r33_probetas\R33_probetas_Ra.png

@@ -1,0 +1,178 @@
+==============================================================================
+1. BARRIDO DE ARQUITECTURAS (R1.2) -- pareado por pliegue, n = 6
+==============================================================================
+
+R2 por probeta y arquitectura:
+arch          A       B       C       D
+Probeta                                
+5        0.6368  0.7096  0.6178  0.7264
+6        0.7826  0.8248  0.7884  0.7815
+7        0.8424  0.7418  0.8623  0.8712
+8        0.7745  0.8175  0.7976  0.5988
+9        0.7288  0.7722  0.7356  0.7277
+10       0.7998  0.8591  0.8224  0.7378
+
+medias: A = 0.7608, B = 0.7875, C = 0.7707, D = 0.7406
+
+Friedman (4 arquitecturas x 6 probetas): chi2 = 4.400, p = 0.2214  -> NO significativo al 5 %
+
+Comparaciones pareadas (todas las parejas):
+par       dif. media   DE dif.   t pareado    p (t)  p (Wilcoxon)
+B vs D         0.0470    0.1185       0.971   0.3762        0.4375
+A vs D         0.0203    0.0907       0.547   0.6079        0.6875
+C vs D         0.0301    0.1032       0.715   0.5064        0.6875
+B vs A         0.0267    0.0635       1.030   0.3503        0.4375
+B vs C         0.0168    0.0717       0.575   0.5902        0.4375
+A vs C        -0.0099    0.0161      -1.502   0.1933        0.1562
+
+LIMITE DE POTENCIA: con n = 6 el p minimo alcanzable por Wilcoxon de dos
+colas es 0.0313 (2/64). Un 'no significativo' aqui NO prueba equivalencia:
+prueba que 6 pliegues no bastan para distinguir estas diferencias.
+
+IC 95 % de la diferencia B - D: [-0.0774, +0.1713]
+El IC contiene el 0 y ademas es ancho: los datos son compatibles tanto con
+'B mejor por 0.10' como con 'D mejor por 0.05'. Eso es lo que hay que decir.
+
+==============================================================================
+2. EFECTO DE LOS OUTLIERS (T1.2 / R1.3) -- pareado por probeta, n = 6
+==============================================================================
+
+ Probeta  R2_limpio  R2_outliers  delta_R2
+       5     0.7264       0.6244   -0.1021
+       6     0.7815       0.7742   -0.0073
+       7     0.8712       0.7704   -0.1008
+       8     0.5988       0.5299   -0.0689
+       9     0.7277       0.6612   -0.0664
+      10     0.7378       0.6882   -0.0497
+
+delta medio = -0.0659   DE del delta = 0.0353
+t pareado = 4.569, p = 0.0060  -> significativo al 5 %
+Wilcoxon   p = 0.0312  -> significativo al 5 %  (es el minimo posible con n=6:
+            las 6 probetas empeoran, no hay ordenamiento mas extremo)
+IC 95 % del delta: [-0.1029, -0.0288]  -- no contiene el 0
+d de Cohen pareado = -1.87  (efecto grande)
+
+CONTRASTE QUE IMPORTA: el mismo n = 6 que NO detecta diferencia entre
+arquitecturas SI detecta el efecto de los outliers. La diferencia no es el
+tamano de muestra, es el tamano del efecto respecto del ruido pareado.
+
+==============================================================================
+3. BRECHA VALIDACION CRUZADA <-> TEST (R3.3)
+==============================================================================
+
+ Fold  Probeta_holdout  R2_CV  MAE_CV  R2_test  MAE_test
+    1                8 0.6611  0.7824   0.8094    0.5148
+    2                7 0.8741  0.3750   0.8542    0.5032
+    3               10 0.7699  0.5786   0.8549    0.4752
+    4                9 0.7123  0.6741   0.8570    0.4556
+    5                5 0.7573  0.5728   0.8782    0.4499
+    6                6 0.6811  0.7216   0.8790    0.4428
+
+Mismos 6 modelos, dos probetas de evaluacion:
+  media CV   = 0.7426  DE = 0.0769
+  media test = 0.8554  DE = 0.0253
+  diferencia = +0.1128  t = 3.695, p = 0.0141 -> significativo al 5 %
+  Wilcoxon p = 0.0625
+
+Razon de varianzas (misma arquitectura, distinta probeta evaluada  vs.
+                    misma probeta, distinto modelo):
+  var entre probetas = 0.00592  (DE 0.0769)
+  var entre modelos  = 0.00064  (DE 0.0253)
+  F = 9.27 (gl 5,5), p = 0.0289 -> significativo al 5 %
+  La variabilidad entre probetas es 3.0x la de entre modelos.
+
+?El R2 de VC predice el de test?  Pearson r = +0.248 (p = 0.636)
+                                  Spearman  = -0.086 (p = 0.872)
+  Correlacion nula o negativa: el numero de VC mide sobre todo que probeta
+  quedo afuera, no la calidad del modelo.
+
+==============================================================================
+4. COMPONENTES DE VARIANZA -- ANOVA de dos vias, arquitectura x probeta
+==============================================================================
+24 corridas (4 arquitecturas x 6 probetas), sin replicacion.
+
+fuente                  SS   gl         MS       F        p
+arquitectura        0.0069    3    0.00231    0.65   0.5926
+probeta             0.0641    5    0.01282    3.63   0.0237
+residual            0.0529   15    0.00353
+
+Componentes de varianza (efectos aleatorios):
+  arquitectura : 0.000000  (  0.0 %)
+  probeta      : 0.002322  ( 39.7 %)
+  residual     : 0.003529  ( 60.3 %)
+
+LECTURA: la arquitectura explica 0.0 % de la varianza del R2;
+la probeta evaluada explica 39.7 %. Es el argumento cuantitativo
+de que el cuello de botella son las 7 probetas, no el diseno de la red.
+
+==============================================================================
+5. CALIBRACION DE LA BANDA DEL ENSEMBLE (R1.4)
+==============================================================================
+
+n = 190 puntos del test (probeta 11)
+MAE = 0.4505 um   SD medio del ensemble = 0.1910 um
+razon MAE / SD = 2.36
+
+    k    cobertura empirica   nominal gaussiano
+  1.0                 27.9 %               68.3 %
+  1.5                 42.6 %               86.6 %
+  2.0                 50.5 %               95.4 %
+  2.5                 57.4 %               98.8 %
+  3.0                 65.8 %               99.7 %
+  4.0                 81.6 %              100.0 %
+  5.0                 87.9 %              100.0 %
+
+Factor empirico necesario: k = 3.08 para 68 %, k = 7.12 para 95 %
+La banda subestima la incertidumbre real por un factor ~3.1x.
+
+?La banda al menos ORDENA el error?
+  Pearson  r = 0.388 (p = 3.09e-08)
+  Spearman r = 0.230 (p = 0.0014)
+  Correlacion real pero debil: sirve como indicador relativo de duda,
+  no como intervalo de confianza.
+
+==============================================================================
+6. CONFORMAL PREDICTION (split) CON RESIDUOS OUT-OF-FOLD
+==============================================================================
+Calibracion = las 1030 predicciones out-of-fold de la VC (cada punto
+predicho por el modelo que NO vio su probeta). Evaluacion = probeta 11.
+
+n calibracion = 1030   MAE out-of-fold = 0.6144 um
+
+   nivel    q (um)  ancho total   cobertura en test
+     68 %     0.659        1.318               78.9 %
+     80 %     0.902        1.803               91.1 %
+     90 %     1.273        2.546               95.3 %
+     95 %     1.989        3.977               98.4 %
+
+LECTURA CLAVE: la cobertura en test SUPERA el nivel nominal en todos los
+niveles. El intervalo conformal es conservador aqui porque los residuos
+out-of-fold (modelos de 5 probetas) son mas grandes que los del modelo
+final de 6 probetas -- la misma brecha del punto 3, ahora a favor.
+
+CAVEAT QUE HAY QUE PLANTEARLE A GOMEZ: el conformal split supone
+intercambiabilidad. Aqui los puntos vienen agrupados por probeta y la
+probeta de test es un grupo nuevo -> el supuesto no se cumple estrictamente.
+La garantia formal seria de conformal por grupos (jackknife+ por probeta).
+
+Variante normalizada (ancho proporcional al SD del ensemble):
+Requiere el SD out-of-fold, que hoy NO existe -- habria que correr los 6
+modelos sobre las 1030 de VC (~15 min de inferencia, sin reentrenar).
+Calibrada sobre el propio test (circular, solo como cota de referencia):
+   68 % -> k = 3.08, ancho medio = 1.175 um
+   90 % -> k = 5.27, ancho medio = 2.014 um
+   95 % -> k = 7.12, ancho medio = 2.719 um
+
+==============================================================================
+7. SESGO POR GRANO (test, n = 190)
+==============================================================================
+
+  grano    n      MAE    sesgo   p (t=0)   SD ens   MAE/SD
+     40   48    0.809   -0.586  2.83e-05    0.294     2.75
+     80   46    0.372    0.044  5.29e-01    0.186     2.00
+    120   48    0.197    0.064  7.21e-02    0.145     1.35
+    180   48    0.421    0.168  1.64e-02    0.138     3.05
+
+P40 subestima medio micron de forma sistematica (compresion de la cola
+rugosa). P180 es el peor calibrado: el modelo esta mas seguro justo donde
+mas se equivoca en terminos relativos.

@@ -1,0 +1,27 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 Cristóbal Mora-Concha, Fabián Iglesias, Arturo Padilla,
+Walter Gómez, Eduardo Diez — Universidad de La Frontera, Temuco, Chile
+
+This license applies to the non-software content of this repository:
+
+  data/      image patches and reference profilometry measurements
+  figures/   figures published in the paper
+  models/    trained model weights
+  results/   computed metrics and prediction tables
+
+You are free to share and adapt this material for any purpose, including
+commercially, provided you give appropriate credit, provide a link to the
+license, and indicate if changes were made.
+
+Attribution should cite the paper:
+
+  Mora-Concha, C., Iglesias, F., Padilla, A., Gómez, W., & Diez, E. (2026).
+  A robotic vision-based inspection system for spatially distributed surface
+  roughness estimation in high-value wood products.
+  Journal of Intelligent Manufacturing.
+
+Full license deed:  https://creativecommons.org/licenses/by/4.0/
+Full legal code:    https://creativecommons.org/licenses/by/4.0/legalcode
+
+The source code in src/ is licensed separately under the MIT License; see LICENSE.

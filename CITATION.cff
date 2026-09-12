@@ -1,0 +1,63 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software or dataset, please cite both the paper and the archived
+  release of this repository.
+title: >-
+  Robotic vision-based inspection for surface roughness estimation in wood — code,
+  dataset and trained models
+abstract: >-
+  Code, image dataset, reference profilometry measurements and trained model weights
+  supporting a multimodal convolutional neural network that estimates the surface
+  roughness parameters Ra and Rz from grazing-light images of robotically sanded
+  Chilean oak, acquired in a dual-robot sanding and inspection cell.
+type: software
+# TODO before publishing the release: add the ORCID of each author as
+#   orcid: "https://orcid.org/0000-0000-0000-0000"
+authors:
+  - family-names: Mora-Concha
+    given-names: Cristóbal
+    affiliation: Universidad de La Frontera, Temuco, Chile
+  - family-names: Iglesias
+    given-names: Fabián
+    affiliation: Universidad de La Frontera, Temuco, Chile
+  - family-names: Padilla
+    given-names: Arturo
+    affiliation: Universidad de La Frontera, Temuco, Chile
+  - family-names: Gómez
+    given-names: Walter
+    affiliation: Universidad de La Frontera, Temuco, Chile
+  - family-names: Diez
+    given-names: Eduardo
+    affiliation: Universidad de La Frontera, Temuco, Chile
+    email: eduardo.diez@ufrontera.cl
+license: MIT
+repository-code: "https://github.com/cmc-techworks/wood-roughness-cnn"
+keywords:
+  - surface roughness
+  - machine vision
+  - convolutional neural network
+  - robotic sanding
+  - wood manufacturing
+  - Nothofagus obliqua
+  - quality inspection
+version: 1.0.0
+date-released: "2026-09-12"
+preferred-citation:
+  type: article
+  title: >-
+    A robotic vision-based inspection system for spatially distributed surface
+    roughness estimation in high-value wood products
+  authors:
+    - family-names: Mora-Concha
+      given-names: Cristóbal
+    - family-names: Iglesias
+      given-names: Fabián
+    - family-names: Padilla
+      given-names: Arturo
+    - family-names: Gómez
+      given-names: Walter
+    - family-names: Diez
+      given-names: Eduardo
+  journal: Journal of Intelligent Manufacturing
+  # TODO on acceptance: fill in year, volume, pages and the article DOI.
+  year: 2026

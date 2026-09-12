@@ -1,0 +1,90 @@
+=== anclaje B-Ra seed 10 Thu Sep 10 13:36:06 HSP 2026 ===
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789058171.331472   23272 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789058183.764671   23272 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1789058187.303160   23272 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+==========================================================================
+ANCLAJE METROLOGICO — mapa contra SJ-310
+==========================================================================
+
+recorte zona_medicion localizacion  inliers  escala  rotacion_deg  n_trazas  Ra_medido  Ra_medido_sd  Ra_mapa  error
+     A1             A         SIFT      176  0.9971         0.004         6      6.410         0.386    6.503  0.093
+     A2             A         SIFT      977  1.0000         0.000         6      6.410         0.386    6.536  0.126
+      B             B         SIFT      915  1.0000        -0.000         6      7.048         0.457    6.377 -0.671
+      C             C         SIFT      934  1.0000        -0.000         6      6.065         0.708    6.437  0.371
+
+  Zonas de medicion distintas : 3 (A1 y A2 comparten trazas)
+  MAE zona a zona             : 0.384 µm
+
+  Media del mapa, cara C1 entera : 6.370 µm
+  Media SJ-310, cara C1 (n=24)   : 6.483 ± 0.592 µm
+  Diferencia                        : -0.113 µm (0.19 desviaciones)
+
+  Referencia: la figura publicada declaraba 5.23 µm, a -1.253 µm de la medicion.
+  Nota: las 48 mediciones de P40 en P11 promedian 6.840 µm, pero incluyen la cara C2, que no es la de esta panoramica.
+
+  -> <PROJECT_ROOT>/src/6_figuras_articulo\salidas\Fig20_21_verificacion_seed10.xlsx
+=== FIN seed 10 exit=0 Thu Sep 10 13:36:55 HSP 2026 ===
+=== anclaje B-Ra seed 11 Thu Sep 10 13:36:55 HSP 2026 ===
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789058216.957524   20984 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789058220.283167   20984 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1789058222.119448   20984 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+==========================================================================
+ANCLAJE METROLOGICO — mapa contra SJ-310
+==========================================================================
+
+recorte zona_medicion localizacion  inliers  escala  rotacion_deg  n_trazas  Ra_medido  Ra_medido_sd  Ra_mapa  error
+     A1             A         SIFT      176  0.9971         0.004         6      6.410         0.386    6.847  0.437
+     A2             A         SIFT      977  1.0000         0.000         6      6.410         0.386    6.883  0.473
+      B             B         SIFT      915  1.0000        -0.000         6      7.048         0.457    6.656 -0.391
+      C             C         SIFT      934  1.0000        -0.000         6      6.065         0.708    6.710  0.645
+
+  Zonas de medicion distintas : 3 (A1 y A2 comparten trazas)
+  MAE zona a zona             : 0.497 µm
+
+  Media del mapa, cara C1 entera : 6.701 µm
+  Media SJ-310, cara C1 (n=24)   : 6.483 ± 0.592 µm
+  Diferencia                        : +0.217 µm (0.37 desviaciones)
+
+  Referencia: la figura publicada declaraba 5.23 µm, a -1.253 µm de la medicion.
+  Nota: las 48 mediciones de P40 en P11 promedian 6.840 µm, pero incluyen la cara C2, que no es la de esta panoramica.
+
+  -> <PROJECT_ROOT>/src/6_figuras_articulo\salidas\Fig20_21_verificacion_seed11.xlsx
+=== FIN seed 11 exit=0 Thu Sep 10 13:37:21 HSP 2026 ===
+=== anclaje B-Ra seed 12 Thu Sep 10 13:37:21 HSP 2026 ===
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789058243.030320   20580 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789058245.236932   20580 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1789058246.449528   20580 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+==========================================================================
+ANCLAJE METROLOGICO — mapa contra SJ-310
+==========================================================================
+
+recorte zona_medicion localizacion  inliers  escala  rotacion_deg  n_trazas  Ra_medido  Ra_medido_sd  Ra_mapa  error
+     A1             A         SIFT      176  0.9971         0.004         6      6.410         0.386    7.078  0.668
+     A2             A         SIFT      977  1.0000         0.000         6      6.410         0.386    7.113  0.703
+      B             B         SIFT      915  1.0000        -0.000         6      7.048         0.457    6.996 -0.052
+      C             C         SIFT      934  1.0000        -0.000         6      6.065         0.708    6.980  0.914
+
+  Zonas de medicion distintas : 3 (A1 y A2 comparten trazas)
+  MAE zona a zona             : 0.551 µm
+
+  Media del mapa, cara C1 entera : 6.984 µm
+  Media SJ-310, cara C1 (n=24)   : 6.483 ± 0.592 µm
+  Diferencia                        : +0.500 µm (0.85 desviaciones)
+
+  Referencia: la figura publicada declaraba 5.23 µm, a -1.253 µm de la medicion.
+  Nota: las 48 mediciones de P40 en P11 promedian 6.840 µm, pero incluyen la cara C2, que no es la de esta panoramica.
+
+  -> <PROJECT_ROOT>/src/6_figuras_articulo\salidas\Fig20_21_verificacion_seed12.xlsx
+=== FIN seed 12 exit=0 Thu Sep 10 13:37:45 HSP 2026 ===

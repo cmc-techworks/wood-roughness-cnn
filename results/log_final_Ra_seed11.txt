@@ -1,0 +1,132 @@
+﻿python.exe : WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+En línea: 5 Carácter: 5
++     & $T entrenar_final_limpio.py --arch A --param $p --seed $s 2>&1  ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (WARNING: All lo...itten to STDERR:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+I0000 00:00:1787010295.092282   15972 port.cc:153] oneDNN custom operations are on. You may see slightly different 
+numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1787010296.976508   15972 port.cc:153] oneDNN custom operations are on. You may see slightly different 
+numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the 
+environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if 
+CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+==============================================================================
+      arquitectura: A
+         parametro: Ra
+              seed: 11
+            epochs: 40
+        batch_size: 32
+          muestras: 1030
+          probetas: [5, 6, 7, 8, 9, 10]
+            etapas: 1
+              hoja: sin_outliers
+           comando: entrenar_final_limpio.py --arch A --param Ra --seed 11
+              nota: correccion de Red_multimodal_VC.py secciones 8-9: una sola etapa de entrenamiento, sin recompilar el mismo objeto
+        tensorflow: 2.21.0
+             keras: 3.14.1
+            python: 3.11.15
+        plataforma: Windows-10-10.0.26200-SP0
+              gpus: []
+          data_dir: <PROJECT_ROOT>/data/fotos_recortes
+==============================================================================
+Parametros: 25,681
+
+Entrenando modelo final (una sola etapa)...
+Epoch 1/40
+33/33 - 6s - 183ms/step - loss: 10.0158 - mae: 2.5998 - learning_rate: 0.0010
+Epoch 2/40
+33/33 - 5s - 158ms/step - loss: 2.5834 - mae: 1.2408 - learning_rate: 0.0010
+Epoch 3/40
+33/33 - 5s - 162ms/step - loss: 2.2779 - mae: 1.1775 - learning_rate: 0.0010
+Epoch 4/40
+33/33 - 5s - 157ms/step - loss: 2.0422 - mae: 1.1043 - learning_rate: 0.0010
+Epoch 5/40
+33/33 - 5s - 161ms/step - loss: 1.6809 - mae: 0.9733 - learning_rate: 0.0010
+Epoch 6/40
+33/33 - 5s - 164ms/step - loss: 1.3543 - mae: 0.8528 - learning_rate: 0.0010
+Epoch 7/40
+33/33 - 5s - 167ms/step - loss: 1.0471 - mae: 0.7362 - learning_rate: 0.0010
+Epoch 8/40
+33/33 - 5s - 163ms/step - loss: 0.8134 - mae: 0.6329 - learning_rate: 0.0010
+Epoch 9/40
+33/33 - 5s - 166ms/step - loss: 0.7071 - mae: 0.5894 - learning_rate: 0.0010
+Epoch 10/40
+33/33 - 5s - 163ms/step - loss: 0.6469 - mae: 0.5675 - learning_rate: 0.0010
+Epoch 11/40
+33/33 - 5s - 166ms/step - loss: 0.6304 - mae: 0.5643 - learning_rate: 0.0010
+Epoch 12/40
+33/33 - 5s - 163ms/step - loss: 0.6400 - mae: 0.5631 - learning_rate: 0.0010
+Epoch 13/40
+33/33 - 6s - 173ms/step - loss: 0.6151 - mae: 0.5550 - learning_rate: 0.0010
+Epoch 14/40
+33/33 - 6s - 176ms/step - loss: 0.6331 - mae: 0.5665 - learning_rate: 0.0010
+Epoch 15/40
+33/33 - 6s - 168ms/step - loss: 0.6452 - mae: 0.5722 - learning_rate: 0.0010
+Epoch 16/40
+33/33 - 5s - 166ms/step - loss: 0.6291 - mae: 0.5627 - learning_rate: 0.0010
+Epoch 17/40
+33/33 - 6s - 169ms/step - loss: 0.6068 - mae: 0.5553 - learning_rate: 0.0010
+Epoch 18/40
+33/33 - 6s - 174ms/step - loss: 0.6359 - mae: 0.5697 - learning_rate: 0.0010
+Epoch 19/40
+33/33 - 6s - 180ms/step - loss: 0.6090 - mae: 0.5516 - learning_rate: 0.0010
+Epoch 20/40
+33/33 - 6s - 173ms/step - loss: 0.6063 - mae: 0.5531 - learning_rate: 0.0010
+Epoch 21/40
+33/33 - 6s - 175ms/step - loss: 0.6099 - mae: 0.5603 - learning_rate: 0.0010
+Epoch 22/40
+33/33 - 6s - 173ms/step - loss: 0.6183 - mae: 0.5593 - learning_rate: 0.0010
+Epoch 23/40
+33/33 - 6s - 177ms/step - loss: 0.6276 - mae: 0.5679 - learning_rate: 0.0010
+Epoch 24/40
+33/33 - 6s - 173ms/step - loss: 0.6110 - mae: 0.5565 - learning_rate: 0.0010
+Epoch 25/40
+33/33 - 6s - 175ms/step - loss: 0.5997 - mae: 0.5490 - learning_rate: 0.0010
+Epoch 26/40
+33/33 - 6s - 171ms/step - loss: 0.6161 - mae: 0.5621 - learning_rate: 0.0010
+Epoch 27/40
+33/33 - 6s - 173ms/step - loss: 0.6040 - mae: 0.5523 - learning_rate: 0.0010
+Epoch 28/40
+33/33 - 6s - 172ms/step - loss: 0.6250 - mae: 0.5675 - learning_rate: 0.0010
+Epoch 29/40
+33/33 - 6s - 178ms/step - loss: 0.6340 - mae: 0.5663 - learning_rate: 0.0010
+Epoch 30/40
+
+Epoch 30: ReduceLROnPlateau reducing learning rate to 0.0005000000237487257.
+33/33 - 6s - 177ms/step - loss: 0.5999 - mae: 0.5468 - learning_rate: 0.0010
+Epoch 31/40
+33/33 - 6s - 176ms/step - loss: 0.6245 - mae: 0.5626 - learning_rate: 5.0000e-04
+Epoch 32/40
+33/33 - 6s - 188ms/step - loss: 0.5954 - mae: 0.5480 - learning_rate: 5.0000e-04
+Epoch 33/40
+33/33 - 6s - 173ms/step - loss: 0.5937 - mae: 0.5448 - learning_rate: 5.0000e-04
+Epoch 34/40
+33/33 - 6s - 173ms/step - loss: 0.5945 - mae: 0.5476 - learning_rate: 5.0000e-04
+Epoch 35/40
+33/33 - 6s - 174ms/step - loss: 0.5939 - mae: 0.5483 - learning_rate: 5.0000e-04
+Epoch 36/40
+33/33 - 6s - 177ms/step - loss: 0.5948 - mae: 0.5482 - learning_rate: 5.0000e-04
+Epoch 37/40
+33/33 - 6s - 174ms/step - loss: 0.6053 - mae: 0.5578 - learning_rate: 5.0000e-04
+Epoch 38/40
+
+Epoch 38: ReduceLROnPlateau reducing learning rate to 0.0002500000118743628.
+33/33 - 6s - 173ms/step - loss: 0.6038 - mae: 0.5521 - learning_rate: 5.0000e-04
+Epoch 39/40
+33/33 - 6s - 175ms/step - loss: 0.5972 - mae: 0.5489 - learning_rate: 2.5000e-04
+Epoch 40/40
+33/33 - 6s - 173ms/step - loss: 0.6056 - mae: 0.5572 - learning_rate: 2.5000e-04
+Restoring model weights from the end of the best epoch: 33.
+
+Tiempo de entrenamiento: 3.8 min (5.7 s/epoca)
+Epocas efectivas: 40 (EarlyStopping patience=10 sobre 'loss')
+Perdida final (MSE, train): 0.605600
+MAE final (train): 0.557188
+
+Modelo guardado en: <PROJECT_ROOT>/src/resultados\A_oficial\Ra\modelos\modelo_A_Ra_final.keras
+Evaluar sobre el test independiente con:
+  python ../4_validacion/validar_headless.py --param Ra --modelo "<PROJECT_ROOT>/src/resultados\A_oficial\Ra\modelos\modelo_A_Ra_final.keras"

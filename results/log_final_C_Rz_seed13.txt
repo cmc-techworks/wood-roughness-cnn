@@ -1,0 +1,119 @@
+=== INICIO C-Rz seed=13 Thu Sep 10 12:15:44 HSP 2026 ===
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789053347.610712    5232 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789053358.137279    5232 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+==============================================================================
+      arquitectura: C
+         parametro: Rz
+              seed: 13
+            epochs: 40
+        batch_size: 32
+          muestras: 1030
+          probetas: [5, 6, 7, 8, 9, 10]
+            etapas: 1
+              hoja: sin_outliers
+           comando: entrenar_final_limpio.py --arch C --param Rz --seed 13
+              nota: correccion de Red_multimodal_VC.py secciones 8-9: una sola etapa de entrenamiento, sin recompilar el mismo objeto
+        tensorflow: 2.21.0
+             keras: 3.14.1
+            python: 3.11.15
+        plataforma: Windows-10-10.0.26200-SP0
+              gpus: []
+          data_dir: <PROJECT_ROOT>/data/fotos_recortes
+==============================================================================
+Parametros: 2,970,705
+
+Entrenando modelo final (una sola etapa)...
+Epoch 1/40
+33/33 - 34s - 1s/step - loss: 194.9582 - mae: 10.4144 - learning_rate: 0.0010
+Epoch 2/40
+33/33 - 40s - 1s/step - loss: 70.3608 - mae: 6.3831 - learning_rate: 0.0010
+Epoch 3/40
+33/33 - 42s - 1s/step - loss: 53.3106 - mae: 5.4132 - learning_rate: 0.0010
+Epoch 4/40
+33/33 - 32s - 982ms/step - loss: 48.3012 - mae: 5.1262 - learning_rate: 0.0010
+Epoch 5/40
+33/33 - 35s - 1s/step - loss: 43.2964 - mae: 4.8085 - learning_rate: 0.0010
+Epoch 6/40
+33/33 - 27s - 817ms/step - loss: 41.9101 - mae: 4.7856 - learning_rate: 0.0010
+Epoch 7/40
+33/33 - 27s - 807ms/step - loss: 40.4854 - mae: 4.7243 - learning_rate: 0.0010
+Epoch 8/40
+33/33 - 27s - 819ms/step - loss: 45.5156 - mae: 5.1497 - learning_rate: 0.0010
+Epoch 9/40
+33/33 - 27s - 827ms/step - loss: 38.9776 - mae: 4.6893 - learning_rate: 0.0010
+Epoch 10/40
+33/33 - 41s - 1s/step - loss: 33.7507 - mae: 4.3192 - learning_rate: 0.0010
+Epoch 11/40
+33/33 - 31s - 949ms/step - loss: 33.2456 - mae: 4.2856 - learning_rate: 0.0010
+Epoch 12/40
+33/33 - 31s - 926ms/step - loss: 34.4618 - mae: 4.3653 - learning_rate: 0.0010
+Epoch 13/40
+33/33 - 20s - 598ms/step - loss: 29.6760 - mae: 4.1137 - learning_rate: 0.0010
+Epoch 14/40
+33/33 - 10s - 300ms/step - loss: 28.5522 - mae: 4.0247 - learning_rate: 0.0010
+Epoch 15/40
+33/33 - 10s - 302ms/step - loss: 27.0104 - mae: 3.8929 - learning_rate: 0.0010
+Epoch 16/40
+33/33 - 24s - 721ms/step - loss: 26.0073 - mae: 3.8227 - learning_rate: 0.0010
+Epoch 17/40
+33/33 - 27s - 809ms/step - loss: 25.7183 - mae: 3.8370 - learning_rate: 0.0010
+Epoch 18/40
+33/33 - 41s - 1s/step - loss: 26.5238 - mae: 3.9155 - learning_rate: 0.0010
+Epoch 19/40
+33/33 - 27s - 829ms/step - loss: 23.7971 - mae: 3.7282 - learning_rate: 0.0010
+Epoch 20/40
+33/33 - 31s - 945ms/step - loss: 22.6658 - mae: 3.6643 - learning_rate: 0.0010
+Epoch 21/40
+33/33 - 23s - 684ms/step - loss: 24.7885 - mae: 3.8146 - learning_rate: 0.0010
+Epoch 22/40
+33/33 - 26s - 798ms/step - loss: 20.3788 - mae: 3.4627 - learning_rate: 0.0010
+Epoch 23/40
+33/33 - 27s - 829ms/step - loss: 21.0134 - mae: 3.5309 - learning_rate: 0.0010
+Epoch 24/40
+33/33 - 28s - 836ms/step - loss: 21.7916 - mae: 3.6020 - learning_rate: 0.0010
+Epoch 25/40
+33/33 - 40s - 1s/step - loss: 20.0426 - mae: 3.4341 - learning_rate: 0.0010
+Epoch 26/40
+33/33 - 27s - 827ms/step - loss: 20.0991 - mae: 3.4625 - learning_rate: 0.0010
+Epoch 27/40
+33/33 - 27s - 812ms/step - loss: 18.9690 - mae: 3.3632 - learning_rate: 0.0010
+Epoch 28/40
+33/33 - 41s - 1s/step - loss: 17.3865 - mae: 3.2792 - learning_rate: 0.0010
+Epoch 29/40
+33/33 - 27s - 815ms/step - loss: 16.1088 - mae: 3.1512 - learning_rate: 0.0010
+Epoch 30/40
+33/33 - 26s - 803ms/step - loss: 24.3883 - mae: 3.8646 - learning_rate: 0.0010
+Epoch 31/40
+33/33 - 27s - 812ms/step - loss: 16.2012 - mae: 3.1248 - learning_rate: 0.0010
+Epoch 32/40
+33/33 - 40s - 1s/step - loss: 15.0927 - mae: 3.0384 - learning_rate: 0.0010
+Epoch 33/40
+33/33 - 42s - 1s/step - loss: 14.5781 - mae: 3.0100 - learning_rate: 0.0010
+Epoch 34/40
+33/33 - 41s - 1s/step - loss: 14.4387 - mae: 2.9730 - learning_rate: 0.0010
+Epoch 35/40
+33/33 - 41s - 1s/step - loss: 12.1236 - mae: 2.7179 - learning_rate: 0.0010
+Epoch 36/40
+33/33 - 41s - 1s/step - loss: 12.8227 - mae: 2.8175 - learning_rate: 0.0010
+Epoch 37/40
+33/33 - 41s - 1s/step - loss: 11.4490 - mae: 2.6792 - learning_rate: 0.0010
+Epoch 38/40
+33/33 - 27s - 811ms/step - loss: 11.0432 - mae: 2.6090 - learning_rate: 0.0010
+Epoch 39/40
+33/33 - 26s - 801ms/step - loss: 11.1262 - mae: 2.6433 - learning_rate: 0.0010
+Epoch 40/40
+33/33 - 27s - 804ms/step - loss: 10.0573 - mae: 2.4976 - learning_rate: 0.0010
+Restoring model weights from the end of the best epoch: 40.
+
+Tiempo de entrenamiento: 20.7 min (31.1 s/epoca)
+Epocas efectivas: 40 (EarlyStopping patience=10 sobre 'loss')
+Perdida final (MSE, train): 10.057256
+MAE final (train): 2.497637
+
+Modelo guardado en: <PROJECT_ROOT>/src/resultados\C_oficial\Rz\modelos\modelo_C_Rz_final_seed13.keras
+Evaluar sobre el test independiente con:
+  python ../4_validacion/validar_headless.py --param Rz --modelo "<PROJECT_ROOT>/src/resultados\C_oficial\Rz\modelos\modelo_C_Rz_final_seed13.keras"
+=== FIN C-Rz seed=13 Thu Sep 10 12:36:51 HSP 2026 exit=0 ===

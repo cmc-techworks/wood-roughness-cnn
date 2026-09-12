@@ -1,0 +1,45 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# --- OS / editors ---
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+.vscode/
+.idea/
+
+# --- Heavy regenerable outputs -------------------------------------------------
+# The architecture sweep writes ~4 GB of checkpoints and per-fold artefacts.
+# Its computed metrics are committed under results/; the checkpoints are not.
+src/3_entrenamiento/resultados_barrido/
+src/3_entrenamiento/resultados_final_limpio/
+src/6_figuras_articulo/salidas/
+**/modelos/*.keras
+!models/**/*.keras
+
+# --- Internal manuscript and peer-review material: never commit ---------------
+# This repository is the public, reproducible record of the study. The revision
+# file, reviewer correspondence, meeting transcripts, response letters and
+# manuscript drafts are private working material and must stay out of history.
+*.docx
+*.doc
+*.rar
+R1*.docx
+R1_backups/
+correos*
+Reunion*
+RESPUESTA*
+PLAN_*
+matriz_comentarios*
+borrador*
+respuesta_coautores/
+Correcciones_Articulo1/
+_archivo_manuscritos/
+Cambio_Iluminacion/
+CLAUDE.md

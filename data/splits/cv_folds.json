@@ -1,0 +1,44 @@
+{
+  "strategy": "GroupKFold leave-one-specimen-out",
+  "n_splits": 6,
+  "grouping_variable": "specimen_id",
+  "applied_to": "train_measurements.csv rows with is_outlier == False (n=1030)",
+  "folds": [
+    {
+      "fold": 1,
+      "held_out_specimen": 8,
+      "n_train": 838,
+      "n_validation": 192
+    },
+    {
+      "fold": 2,
+      "held_out_specimen": 7,
+      "n_train": 840,
+      "n_validation": 190
+    },
+    {
+      "fold": 3,
+      "held_out_specimen": 10,
+      "n_train": 845,
+      "n_validation": 185
+    },
+    {
+      "fold": 4,
+      "held_out_specimen": 9,
+      "n_train": 851,
+      "n_validation": 179
+    },
+    {
+      "fold": 5,
+      "held_out_specimen": 5,
+      "n_train": 887,
+      "n_validation": 143
+    },
+    {
+      "fold": 6,
+      "held_out_specimen": 6,
+      "n_train": 889,
+      "n_validation": 141
+    }
+  ]
+}

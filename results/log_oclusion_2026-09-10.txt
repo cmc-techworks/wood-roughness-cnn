@@ -1,0 +1,31 @@
+=== INICIO oclusion completa 8 combos Thu Sep 10 13:27:24 HSP 2026 ===
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789057645.396359    6684 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789057647.273248    6684 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+  muestra: 40 imagenes del test, 10 por grano
+  ventana 26 px, paso 13 px, semilla 13
+  perturbaciones: media, textura, tono
+  [A-Ra] listo, 40 imagenes, capa conv2d_1
+  [B-Ra] listo, 40 imagenes, capa conv2d_1
+  [C-Ra] listo, 40 imagenes, capa conv2d_1
+  [D-Ra] listo, 40 imagenes, capa conv2d_1
+  [A-Rz] listo, 40 imagenes, capa conv2d_1
+  [B-Rz] listo, 40 imagenes, capa conv2d_1
+  [C-Rz] listo, 40 imagenes, capa conv2d_1
+  [D-Rz] listo, 40 imagenes, capa conv2d_1
+
+====================================================================================================
+arch param  n   mae  ef_media  ef_textura  ef_tono  razon_textura_tono  textura_gana  p_textura_vs_tono  oc_r_textura  oc_r_tono  gc_r_textura  gc_r_tono  fidelidad_gc_oc  oc_borde_centro
+   A    Ra 40 0.280     0.003       0.003    0.000              11.951            40              0.000         0.592      0.823         0.484      0.591            0.593            0.934
+   B    Ra 40 0.376     0.036       0.036    0.010               3.786            40              0.000         0.135     -0.039        -0.127      0.143           -0.032            1.001
+   C    Ra 40 0.359     0.041       0.041    0.009               4.372            40              0.000         0.100     -0.108        -0.145      0.056           -0.036            1.057
+   D    Ra 40 0.337     0.029       0.028    0.004               6.459            40              0.000         0.068     -0.066         0.039      0.104           -0.011            0.999
+   A    Rz 40 2.698     0.021       0.021    0.001              27.145            40              0.000         0.635      0.739         0.545      0.491            0.556            0.949
+   B    Rz 40 3.459     0.071       0.071    0.014               5.141            40              0.000         0.122     -0.007        -0.178      0.206           -0.016            1.091
+   C    Rz 40 3.266     0.245       0.240    0.061               3.926            40              0.000         0.068     -0.149        -0.099      0.127           -0.041            1.195
+   D    Rz 40 3.012     0.330       0.328    0.056               5.860            40              0.000         0.065     -0.131         0.085      0.032            0.010            1.262
+
+-> <PROJECT_ROOT>/src/resultados\interpretabilidad_oclusion
+=== FIN exit=0 Thu Sep 10 13:36:57 HSP 2026 ===

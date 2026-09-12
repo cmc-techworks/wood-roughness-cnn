@@ -1,0 +1,105 @@
+=== mapa Ra seed13 escala publicada 4.5-8.5 Thu Sep 10 12:56:31 HSP 2026 ===
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789055794.092623    5512 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789055799.187868    5512 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1789055801.739446    5512 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+Arquitectura B · Ra · semilla 13
+Panoramica : <PROJECT_ROOT>/data/fotos_recortes\P11\C1\G40\PREPROCESADAS\madera_FinalX.png
+Modelo     : <PROJECT_ROOT>/src/resultados\B_oficial\Ra\modelos\modelo_B_Ra_final_seed13.keras
+Parametros : 709,713
+Imagen     : 7070 x 7899 px = 276 x 309 mm
+
+Pasadas:
+  vertical    tesela 390x130  paso 195x65  n= 4320  6.746 ± 0.661 µm  [4.921, 9.683]
+  horizontal  tesela 130x390  paso 65x195  n= 4356  6.908 ± 0.694 µm  [4.924, 9.914]
+
+Plausibilidad:
+  AVISO: 1 de 8676 predicciones fuera del rango de entrenamiento 1.75-9.833 um (min 4.921, max 9.914)
+
+Mapa       : 122 x 109 celdas de 65 px (2.5 mm)
+  promedio de la superficie   : 6.826 µm
+  rango del mapa (promediado) : [5.219, 8.972]
+  rango de tesela individual  : [4.921, 9.914]   <- el solape estrecha el rango, declararlo en el pie
+
+Limites de color : 4.50 - 8.50 µm  (rango completo; p1=5.74, p99=8.04)
+  la publicada usaba 3.5 con vmax dinamico; para replicarla: --vmin 3.5 --vmax 8.5
+
+Figuras:
+  paneles (a) 508.4 x 568.0 px · (b) 508.4 x 568.0 px · iguales
+  -> <PROJECT_ROOT>/src/6_figuras_articulo\salidas\Fig20_mapa_espacial.png
+  -> <PROJECT_ROOT>/src/6_figuras_articulo\salidas\Fig21_mapa_suavizado.png
+  -> <PROJECT_ROOT>/src/6_figuras_articulo\salidas\Fig20_21_mapa_espacial_cifras.xlsx
+=== FIN Ra exit=0 ===
+=== mapa Rz seed13 escala automatica Thu Sep 10 12:59:27 HSP 2026 ===
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789055968.369490   22980 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789055971.029926   22980 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1789055973.021027   22980 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+Arquitectura C · Rz · semilla 13
+Panoramica : <PROJECT_ROOT>/data/fotos_recortes\P11\C1\G40\PREPROCESADAS\madera_FinalX.png
+Modelo     : <PROJECT_ROOT>/src/resultados\C_oficial\Rz\modelos\modelo_C_Rz_final_seed13.keras
+Parametros : 2,970,705
+Imagen     : 7070 x 7899 px = 276 x 309 mm
+
+Pasadas:
+  vertical    tesela 390x130  paso 195x65  n= 4320  41.241 ± 3.798 µm  [29.491, 55.475]
+  horizontal  tesela 130x390  paso 65x195  n= 4356  42.454 ± 3.497 µm  [28.706, 56.065]
+
+Plausibilidad:
+  OK: finitas, dentro de rango y con variacion real
+
+Mapa       : 122 x 109 celdas de 65 px (2.5 mm)
+  promedio de la superficie   : 41.837 µm
+  rango del mapa (promediado) : [34.118, 50.090]
+  rango de tesela individual  : [28.706, 56.065]   <- el solape estrecha el rango, declararlo en el pie
+
+Limites de color : 34.00 - 50.50 µm  (rango completo; p1=36.65, p99=47.09)
+  la publicada usaba 3.5 con vmax dinamico; para replicarla: --vmin 3.5 --vmax 8.5
+
+Figuras:
+  paneles (a) 510.3 x 570.2 px · (b) 510.3 x 570.2 px · iguales
+  -> <PROJECT_ROOT>/src/6_figuras_articulo\salidas\Fig20_mapa_espacial_Rz.png
+  -> <PROJECT_ROOT>/src/6_figuras_articulo\salidas\Fig21_mapa_suavizado_Rz.png
+  -> <PROJECT_ROOT>/src/6_figuras_articulo\salidas\Fig20_21_mapa_espacial_cifras_Rz.xlsx
+=== FIN Rz exit=0 ===
+=== mapa Ra seed13, escala 5.0-9.0 (la 4.5-8.5 saturaba) Thu Sep 10 13:35:44 HSP 2026 ===
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789058146.606535   14948 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789058153.128361   14948 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1789058157.118178   14948 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+Arquitectura B · Ra · semilla 13
+Panoramica : <PROJECT_ROOT>/data/fotos_recortes\P11\C1\G40\PREPROCESADAS\madera_FinalX.png
+Modelo     : <PROJECT_ROOT>/src/resultados\B_oficial\Ra\modelos\modelo_B_Ra_final_seed13.keras
+Parametros : 709,713
+Imagen     : 7070 x 7899 px = 276 x 309 mm
+
+Pasadas:
+  vertical    tesela 390x130  paso 195x65  n= 4320  6.746 ± 0.661 µm  [4.921, 9.683]
+  horizontal  tesela 130x390  paso 65x195  n= 4356  6.908 ± 0.694 µm  [4.924, 9.914]
+
+Plausibilidad:
+  AVISO: 1 de 8676 predicciones fuera del rango de entrenamiento 1.75-9.833 um (min 4.921, max 9.914)
+
+Mapa       : 122 x 109 celdas de 65 px (2.5 mm)
+  promedio de la superficie   : 6.826 µm
+  rango del mapa (promediado) : [5.219, 8.972]
+  rango de tesela individual  : [4.921, 9.914]   <- el solape estrecha el rango, declararlo en el pie
+
+Limites de color : 5.00 - 9.00 µm  (rango completo; p1=5.74, p99=8.04)
+  la publicada usaba 3.5 con vmax dinamico; para replicarla: --vmin 3.5 --vmax 8.5
+
+Figuras:
+  paneles (a) 508.4 x 568.0 px · (b) 508.4 x 568.0 px · iguales
+  -> <PROJECT_ROOT>/src/6_figuras_articulo\salidas\Fig20_mapa_espacial.png
+  -> <PROJECT_ROOT>/src/6_figuras_articulo\salidas\Fig21_mapa_suavizado.png
+  -> <PROJECT_ROOT>/src/6_figuras_articulo\salidas\Fig20_21_mapa_espacial_cifras.xlsx
+=== FIN Ra escala 5-9 exit=0 Thu Sep 10 13:37:41 HSP 2026 ===

@@ -1,0 +1,48 @@
+=== verificacion del mapa Ra, semilla 13 Thu Sep 10 13:29:32 HSP 2026 ===
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789057776.185002   20012 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789057782.177013   20012 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1789057785.777177   20012 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+==========================================================================
+ANCLAJE METROLOGICO — mapa contra SJ-310
+==========================================================================
+
+recorte zona_medicion localizacion  inliers  escala  rotacion_deg  n_trazas  Ra_medido  Ra_medido_sd  Ra_mapa  error
+     A1             A         SIFT      176  0.9971         0.004         6      6.410         0.386    6.902  0.492
+     A2             A         SIFT      977  1.0000         0.000         6      6.410         0.386    6.957  0.547
+      B             B         SIFT      915  1.0000        -0.000         6      7.048         0.457    6.913 -0.135
+      C             C         SIFT      934  1.0000        -0.000         6      6.065         0.708    6.750  0.685
+
+  Zonas de medicion distintas : 3 (A1 y A2 comparten trazas)
+  MAE zona a zona             : 0.446 µm
+
+  Media del mapa, cara C1 entera : 6.826 µm
+  Media SJ-310, cara C1 (n=24)   : 6.483 ± 0.592 µm
+  Diferencia                        : +0.343 µm (0.58 desviaciones)
+
+  Referencia: la figura publicada declaraba 5.23 µm, a -1.253 µm de la medicion.
+  Nota: las 48 mediciones de P40 en P11 promedian 6.840 µm, pero incluyen la cara C2, que no es la de esta panoramica.
+
+==========================================================================
+FORENSE — que geometria produjo la figura publicada
+==========================================================================
+  Modelo D: 12,211,281 parametros
+  Objetivo: reproducir el 'Mean value: 5.23 µm' de la Fig. 20b actual
+
+  130x43   GUI "Muy alta"     60 x  164 =  9840 teselas de  5.1 x  1.7 mm   media  5.224 µm (-0.006)
+  260x87   GUI "Alta"         30 x   81 =  2430 teselas de 10.2 x  3.4 mm   media  5.774 µm (+0.544)
+  390x130  GUI "Media"        20 x   54 =  1080 teselas de 15.2 x  5.1 mm   media  6.175 µm (+0.945)
+  780x260  GUI "Baja"         10 x   27 =   270 teselas de 30.5 x 10.2 mm   media  5.303 µm (+0.073)
+  130x390  transpuesta        60 x   18 =  1080 teselas de  5.1 x 15.2 mm   media  4.586 µm (-0.644)
+  130x390  + rotacion         60 x   18 =  1080 teselas de  5.1 x 15.2 mm   media  6.316 µm (+1.086)
+
+  Coincide: '130x43   GUI "Muy alta"' -> 5.224 µm, a 0.006 µm de la publicada.
+  Su tesela mide 5.1 x 1.7 mm, contra los 15.2 x 5.1 mm del recorte
+  de entrenamiento: el modelo recibio regiones mucho mas chicas que su
+  campo de vision nominal, reescaladas para calzar en la entrada.
+
+  -> <PROJECT_ROOT>/src/6_figuras_articulo\salidas\Fig20_21_verificacion.xlsx
+=== FIN exit=0 Thu Sep 10 13:31:03 HSP 2026 ===
