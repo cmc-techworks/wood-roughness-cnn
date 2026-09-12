@@ -36,8 +36,8 @@ Ra MAE 0.495 ± 0.061 µm and Rz MAE 3.898 ± 0.326 µm.
 
 ## Level 1 — figures and tables
 
-**A note on file names.** Figure numbering shifted late in the revision, and the scripts still
-write the older internal names. `figures/` holds the files under the numbering used in the paper.
+**A note on file names.** The scripts write internal file names that do not always match the
+figure numbers used in the paper. `figures/` holds the files under the numbering used in the paper.
 The mapping is below; the left column is what the paper calls it, the right is the file the script
 writes into `salidas/`.
 

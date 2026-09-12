@@ -20,8 +20,7 @@ every figure and table in the paper.
 ## Headline results
 
 Mean ± standard deviation over 4 weight initialisations (seeds 10–13). The two roughness
-parameters use different network variants, selected independently — see
-[docs/model_selection.md](docs/model_selection.md).
+parameters use different network variants, selected independently.
 
 | | Variant | Parameters | Cross-validation (6 folds) | Independent test (specimen 11, n = 190) |
 |---|---|---|---|---|
@@ -56,7 +55,6 @@ models/
 results/                   metrics, per-fold predictions and run logs
 figures/body/              Fig. 12–20 as published (PNG 300 dpi + vector PDF)
 figures/appendix/          Fig. A1–A10
-docs/                      reproduction notes, model selection, known limitations
 ```
 
 ## Quickstart
@@ -98,16 +96,18 @@ environment is CPU-only; one cross-validation fold takes roughly 4.5–5 minutes
 versions, platform string and the command line of each run are recorded in the
 `config_corrida*.json` files under `results/`.
 
-## What is deliberately not here
+## What is not included
 
-- **Intermediate checkpoints of the architecture sweep** (~4 GB). Regenerable with
-  `src/3_entrenamiento/barrido_arquitecturas.py`; the resulting metrics are in `results/`.
+Large intermediate artefacts are left out because they are regenerable from the code in this
+repository:
+
+- **Model checkpoints of the architecture sweep** (~4 GB). Regenerate with
+  `src/3_entrenamiento/barrido_arquitecturas.py`. Their computed metrics, per-epoch histories and
+  per-fold predictions *are* included, under `results/architecture_sweep/`, so every architecture
+  figure regenerates without retraining.
 - **Raw panorama captures of specimen 11** (~2.3 GB). The spatial map in Fig. 19–20 is built from
-  the already-stitched panorama; the raw 12-pose captures are available from the authors on request.
-- **The ambient-light robustness campaign.** Two methodological issues in that campaign remain
-  unresolved, so it does not back any published number.
-- **Superseded scripts** kept in the working tree during development, including one that overwrites
-  the spreadsheet it analyses. See [docs/excluded.md](docs/excluded.md).
+  the already-stitched panorama, which is included. The raw 12-pose captures are available from
+  the corresponding author on reasonable request.
 
 ## License
 
