@@ -3,10 +3,6 @@ MIT License
 Copyright (c) 2026 Cristóbal Mora-Concha, Fabián Iglesias, Arturo Padilla,
 Walter Gómez, Eduardo Diez — Universidad de La Frontera, Temuco, Chile
 
-This license applies to the source code in this repository (the `src/` directory).
-The dataset in `data/`, the figures in `figures/` and the model weights in `models/`
-are licensed separately under CC BY 4.0; see LICENSE-DATA.
-
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
